@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using Leap.Unity;
 using Leap;
-using 
+
 
 public class SpawnSkeeball : MonoBehaviour
 {
 
-    public GameObject skeeball;
-    public Transform skeeballPosition;
+    //public GameObject skeeball;
+    //public Transform skeeballPosition;
     // Start is called before the first frame update
     void Start()
     {
 
-        if (!skeeball.activeInHierarchy)
-        {
+     //   if (!skeeball.activeInHierarchy)
+       // {
             
-        }
+       // }
 
 
     }
