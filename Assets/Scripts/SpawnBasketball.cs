@@ -20,8 +20,11 @@ public class SpawnBasketball : MonoBehaviour
  
         if (Input.GetKeyDown(KeyCode.B)) {
             rb.useGravity = false;
-            Debug.Log("B pressed");
             GameObject clone = Instantiate(ball, ballPos, Quaternion.identity);
         }
+    }
+    void printTest()
+    {
+        Debug.Log("fn called");
     }
 }
