@@ -7,7 +7,7 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {instanceID: 0}
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -105,7 +105,7 @@ ScriptedImporter:
       y: 4
       width: 307
       height: 754
-    spriteID: 3b7c77aff3266b949bcf65ede915d6bc
+    spriteID: 21bbf59c4ba30fa44ab2aecb09ada547
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,7 +153,7 @@ ScriptedImporter:
     spriteName: Bowling Pin
     isGroup: 0
     parentIndex: -1
-    spriteID: 3b7c77aff3266b949bcf65ede915d6bc
+    spriteID: 21bbf59c4ba30fa44ab2aecb09ada547
     layerID: 34
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
