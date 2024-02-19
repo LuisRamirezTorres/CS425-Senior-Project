@@ -63,6 +63,7 @@ public class DartPinchStrength : MonoBehaviour
         else
         {
             rb.isKinematic = false;
+            rb.AddForce(transform.forward * 10f);
         }
         
     }
