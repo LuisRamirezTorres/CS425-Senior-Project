@@ -5,8 +5,8 @@ using UnityEngine;
 public class BasketballAcceleration : MonoBehaviour
 {
     public Rigidbody basketball_rb;
-    public int x_added_speed;
-    public int y_added_speed;
+    public float x_added_speed;
+    public float y_added_speed;
     // Start is called before the first frame update
     void Start()
     {
