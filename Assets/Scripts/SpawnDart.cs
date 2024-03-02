@@ -11,6 +11,7 @@ public class SpawnDart : MonoBehaviour
     void Start()
     {
         dartPos = dart.transform.position;
+//        newDart = dart;
     }
 
     // Update is called once per frame

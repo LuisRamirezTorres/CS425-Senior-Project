@@ -9,7 +9,7 @@ public class DartCount : MonoBehaviour
     public static DartCount instance;
     
     public TMP_Text dartText;
-    public int currentDarts = 5;
+    public int currentDarts = 10;
 
     private void Awake()
     {
