@@ -105,7 +105,7 @@ ScriptedImporter:
       y: 4
       width: 2861
       height: 467
-    spriteID: 38695b1047463d4459390ad0f76cb4cc
+    spriteID: 4426f1f4d47e7754f9fdae035d2f38bb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,7 +153,7 @@ ScriptedImporter:
     spriteName: VRcade Suite copy
     isGroup: 0
     parentIndex: -1
-    spriteID: 38695b1047463d4459390ad0f76cb4cc
+    spriteID: 4426f1f4d47e7754f9fdae035d2f38bb
     layerID: 53
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
