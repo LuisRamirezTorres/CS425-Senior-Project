@@ -114,7 +114,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &1352561615280479851
 CapsuleCollider:
@@ -151,7 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00a741834c94aa540b31cba546a709a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dart_rb: {fileID: 4669438856089987779}
+  dartRB: {fileID: 4669438856089987779}
+  dartBoardRB: {fileID: 3336312929181936255, guid: 4ab7183c27fcd254fa33bf1f8b7e9fad, type: 3}
   x_added_speed: 3.5
   y_added_speed: 2
 --- !u!114 &606651303766550789

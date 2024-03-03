@@ -10,6 +10,7 @@ public class DartCount : MonoBehaviour
     
     public TMP_Text dartText;
     public int currentDarts = 10;
+    public string dartStr = " Darts";
 
     private void Awake()
     {
@@ -19,14 +20,14 @@ public class DartCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dartText.text = currentDarts.ToString();
+        dartText.text = currentDarts.ToString() + dartStr;
     }
     
 
     public void DecreaseDarts()
     {
         currentDarts--;
-        dartText.text = currentDarts.ToString();
+        dartText.text = currentDarts.ToString() + dartStr;
     }
     
 }

@@ -16,6 +16,7 @@ public class SpawnTipDart : MonoBehaviour
     public Quaternion dartOrientation;
     
     public LeapProvider leapProvider;
+    public DartCount dartCount;
     
     public bool isInstantiated;
     public int throwCount;
@@ -57,6 +58,7 @@ public class SpawnTipDart : MonoBehaviour
         if (_thumb.IsExtended && !isInstantiated)
         {
             Debug.Log("Thumb is extended");
+            dartCount.DecreaseDarts();
             SpawnDart();
             isInstantiated = true;
         }
