@@ -8,7 +8,7 @@ public class SpawnBasketball : MonoBehaviour
     public Vector3 ballPos;
     public Vector3 highBallPos;
     public Rigidbody rb;
-    private float cooldown = 2.0f;
+    private float cooldown = 1.25f;
     private bool spawning = false;
  
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class SpawnBasketball : MonoBehaviour
         if (this.spawning &&  cooldown <= 0)
         {
             this.spawning = false;
-            this.cooldown = 2.0f;
+            this.cooldown = 1.25f;
             rb.useGravity = false;
             GameObject clone = Instantiate(ball, ballPos, Quaternion.identity);
         }
