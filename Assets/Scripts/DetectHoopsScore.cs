@@ -19,7 +19,7 @@ public class DetectHoopsScore : MonoBehaviour
     void Update()
     {
         time_remaining -= Time.deltaTime;
-        score_text.text = "Score: " + score.ToString() + "\n" + "Time: " + Math.Floor(time_remaining).ToString();
+        score_text.text = "Score: " + score.ToString() + "\n" + "Time: " + Math.Max(Math.Floor(time_remaining), 0).ToString();
 
     }
     private void OnTriggerEnter(Collider other)
@@ -27,6 +27,9 @@ public class DetectHoopsScore : MonoBehaviour
         Debug.Log("Collision detected");
         print(other.tag);
         Destroy(other.gameObject);
-        score++;
+        if (time_remaining > 0)
+        {
+            score++;
+        }
     }
 }

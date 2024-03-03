@@ -8,6 +8,8 @@ public class SpawnBasketball : MonoBehaviour
     public Vector3 ballPos;
     public Vector3 highBallPos;
     public Rigidbody rb;
+    private float cooldown = 2.0f;
+    private bool spawning = false;
  
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,21 @@ public class SpawnBasketball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
- 
+        if (this.spawning &&  cooldown <= 0)
+        {
+            this.spawning = false;
+            this.cooldown = 2.0f;
+            rb.useGravity = false;
+            GameObject clone = Instantiate(ball, ballPos, Quaternion.identity);
+        }
+        else if (this.spawning)
+        {
+            this.cooldown -= Time.deltaTime;
+        }
+        {
+            
+        }
+
         if (Input.GetKeyDown(KeyCode.B)) {
             rb.useGravity = false;
             GameObject clone = Instantiate(ball, ballPos, Quaternion.identity);
@@ -33,5 +49,15 @@ public class SpawnBasketball : MonoBehaviour
     void printTest()
     {
         Debug.Log("fn called");
+    }
+
+    void spawn()
+    {
+        if (!spawning)
+        {
+
+            spawning = true;
+        }
+
     }
 }
