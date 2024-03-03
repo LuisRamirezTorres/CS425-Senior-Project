@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66e5a9d4-5a04-4b40-873d-fd108fdca598" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CS425-Senior-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS425-Senior-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/Tip Dart Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/Tip Dart Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartAcceleration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartAcceleration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartCount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartCount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnTipDart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnTipDart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnDart.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnDart.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +124,7 @@
       <workItem from="1708545199926" duration="1834000" />
       <workItem from="1709321415783" duration="12102000" />
       <workItem from="1709432960388" duration="2535000" />
+      <workItem from="1709499545791" duration="296000" />
     </task>
     <servers />
   </component>
