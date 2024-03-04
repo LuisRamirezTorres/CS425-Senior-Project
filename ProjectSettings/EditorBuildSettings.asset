@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameRoom.unity
     guid: 3c0aeae1835a1e84ab6fce0ae80f4dc7
+  - enabled: 1
+    path: Assets/Scenes/Basketball.unity
+    guid: 747f9821507ba774b95aed4a6d32d665
   m_configObjects: {}

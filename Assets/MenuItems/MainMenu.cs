@@ -8,12 +8,12 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     public void enterSelection()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("BasketBall");
     }
 
     public void enterSettings()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("SettingsMenu");
     }
 
    
