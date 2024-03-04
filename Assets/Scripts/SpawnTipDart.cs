@@ -51,11 +51,10 @@ public class SpawnTipDart : MonoBehaviour
 
     void OnUpdateHand(Hand _hand)
     {
-        Finger _thumb = _hand.GetThumb();
         
-        // To respawn a ball, the left thumb must be extended, then unextended.
+        // To respawn a ball, the left hand must be open, then unextended.
         // The current ball must also not exist
-        if (_thumb.IsExtended && !isInstantiated)
+        if (IsExtended(_hand) && !isInstantiated)
         {
             Debug.Log("Thumb is extended");
             dartCount.DecreaseDarts();
@@ -63,7 +62,7 @@ public class SpawnTipDart : MonoBehaviour
             isInstantiated = true;
         }
 
-        if (!_thumb.IsExtended)
+        if (!IsExtended(_hand))
         {
             isInstantiated = false;
         }
@@ -73,6 +72,29 @@ public class SpawnTipDart : MonoBehaviour
     {
         dartInstance = Instantiate(dartPrefab, dartPos, dartOrientation);
         throwCount++;
+    }
+
+    bool IsExtended(Hand _hand)
+    {
+        bool isHandOpen;
+        Finger _thumb = _hand.GetThumb();
+        Finger _index = _hand.GetIndex();
+        Finger _middle = _hand.GetMiddle();
+        Finger _ring = _hand.GetRing();
+        Finger _pinky = _hand.GetPinky();
+
+        bool isThumb = _thumb.IsExtended;
+        bool isIndex = _index.IsExtended;
+        bool isMiddle = _middle.IsExtended;
+        bool isRing = _ring.IsExtended;
+        bool isPinky = _pinky.IsExtended;
+
+        if (isThumb && isIndex && isMiddle && isRing && isPinky)
+            isHandOpen = true;
+        else
+            isHandOpen = false;
+
+        return isHandOpen;
     }
     
 }
