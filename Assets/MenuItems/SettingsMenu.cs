@@ -21,5 +21,10 @@ public class settingsMenu : MonoBehaviour
 
     }
 
+    public void goToMenu()
+    {
+        
+        SceneManager.LoadScene("MainMenu");
 
+    }
 }

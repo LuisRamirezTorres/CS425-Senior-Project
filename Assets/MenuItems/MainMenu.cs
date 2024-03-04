@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     public void enterSelection()
     {
-        SceneManager.LoadScene("BasketBall");
+        SceneManager.LoadScene("GameRoom");
     }
 
     public void enterSettings()
@@ -16,6 +16,12 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("SettingsMenu");
     }
 
-   
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 
 }
