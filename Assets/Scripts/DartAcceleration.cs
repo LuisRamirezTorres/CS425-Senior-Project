@@ -22,7 +22,7 @@ public class DartAcceleration : MonoBehaviour
     }
     void PrintVelocity()
     {
-        Debug.Log(dartRB.velocity);
+        Debug.Log("Dart Velocity: " + dartRB.velocity);
     }
     void Accelerate()
     {

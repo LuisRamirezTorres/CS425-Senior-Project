@@ -52,11 +52,10 @@ public class SpawnTipDart : MonoBehaviour
     void OnUpdateHand(Hand _hand)
     {
         
-        // To respawn a ball, the left hand must be open, then unextended.
-        // The current ball must also not exist
+        // To respawn a dart, the left hand must be open, then unopened.
         if (IsExtended(_hand) && !isInstantiated)
         {
-            Debug.Log("Thumb is extended");
+            Debug.Log("All fingers are extended");
             dartCount.DecreaseDarts();
             SpawnDart();
             isInstantiated = true;
@@ -71,6 +70,7 @@ public class SpawnTipDart : MonoBehaviour
     public void SpawnDart()
     {
         dartInstance = Instantiate(dartPrefab, dartPos, dartOrientation);
+        Debug.Log("Instantiating new Tip Dart");
         throwCount++;
     }
 

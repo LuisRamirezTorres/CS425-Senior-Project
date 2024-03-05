@@ -20,6 +20,7 @@ public class HideCanvas : MonoBehaviour
     IEnumerator DisableCanvas(GameObject canvasObj, float t)
     {
         yield return new WaitForSeconds(t);
-        Destroy(canvasObject);
+        Debug.Log("Hiding Pop Up");
+        Destroy(canvasObj);
     }
 }

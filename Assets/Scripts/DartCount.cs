@@ -28,6 +28,7 @@ public class DartCount : MonoBehaviour
     {
         currentDarts--;
         dartText.text = currentDarts.ToString() + dartStr;
+        Debug.Log("Decreasing Dart Count to: " + dartText.text);
     }
     
 }
