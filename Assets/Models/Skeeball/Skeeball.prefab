@@ -238,3 +238,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac3484078f5caa4b9a06d2be228bafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreAndBallsLeft: {fileID: 2904466250545820655, guid: d2b7ffe62c0badf4d8cd5bf7f0973900, type: 3}
