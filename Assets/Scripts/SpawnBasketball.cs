@@ -15,6 +15,7 @@ public class SpawnBasketball : MonoBehaviour
     void Start()
     {
         ballPos = ball.transform.position;
+        ballPos -= new Vector3(0, 0, 3.22f);
         highBallPos = ball.transform.position + new Vector3(0,(float)(0.15) ,0);
     }
 
