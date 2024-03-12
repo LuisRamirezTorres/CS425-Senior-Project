@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="66e5a9d4-5a04-4b40-873d-fd108fdca598" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CS425-Senior-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS425-Senior-Project/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartAcceleration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartAcceleration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartCount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartCount.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HideCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HideCanvas.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnTipDart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnTipDart.cs" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Darts.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Darts.unity" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +45,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+<<<<<<< Updated upstream
     &quot;git-widget-placeholder&quot;: &quot;Darts&quot;,
+=======
+    &quot;git-widget-placeholder&quot;: &quot;Release__1.0&quot;,
+>>>>>>> Stashed changes
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -130,6 +138,13 @@
       <workItem from="1709499545791" duration="296000" />
       <workItem from="1709521461234" duration="1010000" />
       <workItem from="1709607433181" duration="4119000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1709860456375" duration="596000" />
+      <workItem from="1710181721880" duration="4792000" />
+      <workItem from="1710196594564" duration="5700000" />
+      <workItem from="1710212828702" duration="31000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
