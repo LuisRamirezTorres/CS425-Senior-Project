@@ -9,8 +9,8 @@ public class DartboardScore : MonoBehaviour
     public GameObject dartTip;
 
     private int score;
-    private int[] angleArr = new int[360];
-    private Transform dartPos;
+    
+    private Vector3 dartPos;
     
     private SphereCollider dartBoardCollider;
     
@@ -25,11 +25,6 @@ public class DartboardScore : MonoBehaviour
         dartBoardCollider = GetComponent<SphereCollider>();
         colliderRadius = GetComponent<SphereCollider>().radius;
         colliderCenter = GetComponent<SphereCollider>().center;
-
-        for (var i = 0; i < 360; i++)
-        {
-            angleArr[i] = i;
-        }
     }
 
     // Update is called once per frame
@@ -40,15 +35,32 @@ public class DartboardScore : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        angle = Mathf.Atan2(colliderCenter.x, colliderCenter.y);
+        dartPos = dartTip.transform.position;
+        float dartPosX = dartPos.x;
+        float dartPosY = dartPos.y;
+        CheckDistance(dartPosX, dartPosY);
+        angle = GetDartAngle(dartPosX, dartPosY);
         CheckAngle();
 
         
     }
 
-    private void CheckDistance()
+    private float GetDartAngle(float dartPosX, float dartPosY)
     {
+        return Mathf.Atan2(dartPosY - colliderCenter.y, dartPosX - colliderCenter.x) * 180 / Mathf.PI;
+    }
+
+    private void CheckDistance(float dartPosX, float dartPosY)
+    {
+        if (dartPosY == (0.5f * colliderRadius) || (dartPosX == (0.5f * colliderRadius)))
+        {
+            score *= 3;
+        }
         
+        if (dartPosY == colliderRadius || dartPosX == 0.5f * colliderRadius)
+        {
+            score *= 2;
+        }
     }
 
     private void CheckAngle()
