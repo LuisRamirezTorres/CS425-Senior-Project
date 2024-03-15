@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b389de94d6620b4f8ab8bb2bd322a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dartBoard: {fileID: 3586995054290179298, guid: 4ab7183c27fcd254fa33bf1f8b7e9fad, type: 3}
+  floatingScorePrefab: {fileID: 4055409110594382312, guid: e82a5e1dc34398148a3b85d3bc9a5e0a, type: 3}
   dartTip: {fileID: 5495455744778267216, guid: c36e9ed7aab72104eade1276d172f076, type: 3}
   scoreText: {fileID: 8460892091508735979, guid: 5eeeac133ea85a94eb7c47cc7022d1a4, type: 3}
   scoreStr: 'Score: '

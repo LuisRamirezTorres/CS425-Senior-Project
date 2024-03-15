@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class DartboardScore : MonoBehaviour
 {
-    public GameObject dartBoard;
+    public GameObject floatingScorePrefab;
     public GameObject dartTip;
     public TMP_Text scoreText;
     public string scoreStr = "Score: ";
@@ -55,7 +55,9 @@ public class DartboardScore : MonoBehaviour
         angle = GetDartAngle(dartPosY, dartPosZ);
         Debug.Log("Angle: " + angle);
         var angleScore = CheckAngle();
+        var tempScore = angleScore * distanceScore;
         currentScore += (distanceScore * angleScore);
+        ShowFloatingScore(dartPos, tempScore);
         
     }
 
@@ -134,53 +136,14 @@ public class DartboardScore : MonoBehaviour
             angleScore = 16;
         if (angle is < 351.0f and > 333.0f)
             angleScore = 8;
-        
-        /*if (angle is < 81.0f and > 63.0f)
-            angleScore = 1;
-        if (angle is < 63.0f and > 45.0f)
-            angleScore = 18;
-        if (angle is < 45.0f and > 27.0f)
-            angleScore = 4;
-        if (angle is < 27.0f and > 9.0f)
-            angleScore = 13;
-        
-        if (angle is < 351.0f and > 9.0f)
-            angleScore = 6;
-        if (angle is < 351.0f and > 333.0f)
-            angleScore = 10;
-        if (angle is < 333.0f and > 315.0f)
-            angleScore = 15;
-        if (angle is < 315.0f and > 297.0f)
-            angleScore = 2;
-        
-        if (angle is < 297.0f and > 279.0f)
-            angleScore = 17;
-        if (angle is < 279.0f and > 261.0f)
-            angleScore = 3;
-        if (angle is < 261.0f and > 243.0f)
-            angleScore = 19;
-        if (angle is < 243.0f and > 225.0f)
-            angleScore = 7;
-        
-        if (angle is < 225.0f and > 207.0f)
-            angleScore = 16;
-        if (angle is < 207.0f and > 189.0f)
-            angleScore = 8;
-        if (angle is < 189.0f and > 171.0f)
-            angleScore = 11;
-        if (angle is < 171.0f and > 153.0f)
-            angleScore = 14;
-        
-        if (angle is < 153.0f and > 135.0f)
-            angleScore = 9;
-        if (angle is < 135.0f and > 117.0f)
-            angleScore = 12;
-        if (angle is < 117.0f and > 99.0f)
-            angleScore = 5;
-        if (angle is < 99.0f and > 81.0f)
-            angleScore = 20;*/
 
         Debug.Log("angleScore: " + angleScore);
         return angleScore;
+    }
+
+    void ShowFloatingScore(Vector3 dartPos, int tempScore)
+    {
+        var floatingText = Instantiate(floatingScorePrefab, dartPos, Camera.main.transform.rotation);
+        floatingText.GetComponent<TMP_Text>().text = tempScore.ToString();
     }
 }
