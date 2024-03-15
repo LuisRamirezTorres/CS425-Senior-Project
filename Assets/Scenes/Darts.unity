@@ -35502,6 +35502,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DartScore (TMP)
       objectReference: {fileID: 0}
+    - target: {fileID: 8460892091508735979, guid: 5eeeac133ea85a94eb7c47cc7022d1a4, type: 3}
+      propertyPath: m_text
+      value: 'Score: 0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460892091508735979, guid: 5eeeac133ea85a94eb7c47cc7022d1a4, type: 3}
+      propertyPath: m_fontSize
+      value: 37.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
