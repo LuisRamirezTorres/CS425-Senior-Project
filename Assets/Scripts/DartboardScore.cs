@@ -10,6 +10,7 @@ public class DartboardScore : MonoBehaviour
     public GameObject dartTip;
     public TMP_Text scoreText;
     public string scoreStr = "Score: ";
+    public MeshCollider meshCollider;
 
     private int currentScore;
 
@@ -18,12 +19,6 @@ public class DartboardScore : MonoBehaviour
     private float colliderRadius;
     private Vector3 colliderCenter;
     private float angle;
-
-    public MeshCollider meshCollider;
-    
-//    public SphereCollider dartBoardCollider;
-//    private float colliderRadius;
-//    private Vector3 colliderCenter;
     
     // Start is called before the first frame update
     void Start()
@@ -37,38 +32,30 @@ public class DartboardScore : MonoBehaviour
         
         Debug.Log("colliderCenter: " + colliderCenter);
         Debug.Log("colliderRadius: " + colliderRadius);
-//        mesh = GetComponent<MeshFilter>().mesh;
-//        bounds = mesh.bounds;
-//        colliderRadius = bounds.extents.x;
-//        colliderCenter = bounds.center;
 
-        /*dartBoardCollider = GetComponent<SphereCollider>();
-        colliderRadius = GetComponent<SphereCollider>().radius;
-        colliderCenter = GetComponent<SphereCollider>().center;*/
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        scoreText.text = scoreStr + currentScore.ToString();
     }
 
     private void OnTriggerEnter(Collider collider)
     {
         Debug.Log("Collision detected");
-
+        
+//        Vector3 dartPos = GameObject.Find("Tip Dart").transform.position;
         Vector3 dartPos = dartTip.transform.position;
         Debug.Log("dartPos: " + dartPos);
         float dartPosY = dartPos.y;
         float dartPosZ = dartPos.z;
         
-//        distanceScore = CheckDistance(dartPosY, dartPosZ);
         var distanceScore = CheckDistance(dartPos);
         angle = GetDartAngle(dartPosY, dartPosZ);
         Debug.Log("Angle: " + angle);
         var angleScore = CheckAngle();
         currentScore += (distanceScore * angleScore);
-        scoreText.text = scoreStr + currentScore.ToString();
         
     }
 
@@ -76,36 +63,25 @@ public class DartboardScore : MonoBehaviour
     {
         float degrees = Mathf.Atan2(dartPosY - colliderCenter.y, dartPosZ - colliderCenter.z) * 180 / Mathf.PI;
         degrees = (degrees + 360) % 360;
-    //    return degrees;
-        /*if (degrees > 180)
-            degrees = 270 + degrees;
-        else
-            degrees = 90 + degrees;*/
         return degrees;
     }
 
     private int CheckDistance(Vector3 dartPos)
     {
         var distanceScore = 0;
+        
         float dartDistanceFromCenter = Vector3.Distance(dartPos, colliderCenter);
-        float halfRadius = colliderRadius * 0.5f;
+        Debug.Log("Dart distance from center: " + dartDistanceFromCenter);
+        
+    
 
-        if (dartDistanceFromCenter == colliderRadius)
-            distanceScore = 2;
-        else if (dartDistanceFromCenter is < 0.3507f and > 0.3206f)
+        if (dartDistanceFromCenter is < 0.43f and > 0.37f)
             distanceScore = 3;
+        else if (dartDistanceFromCenter is < 0.65f and > 0.60f)
+            distanceScore = 2;
         else
             distanceScore = 1;
         
-        /*if (dartPosY == (0.5f * colliderRadius) || (dartPosZ == (0.5f * colliderRadius)))
-        {
-            distanceScore = 3;
-        }
-        
-        if (dartPosY == colliderRadius || dartPosZ == colliderRadius)
-        {
-            distanceScore = 2;
-        }*/
         Debug.Log("distanceScore: " + distanceScore);
         return distanceScore;
     }

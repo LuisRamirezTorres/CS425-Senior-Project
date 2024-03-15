@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tip Dart Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      propertyPath: m_TagString
+      value: Tip Dart
+      objectReference: {fileID: 0}
     - target: {fileID: 1638581748493467253, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.29469758
