@@ -11,6 +11,7 @@ public class SkeeballScore : MonoBehaviour
     
     private GameManager instance;
     public TextMeshProUGUI scoreAndBallsLeft;
+    public TextMeshProUGUI gameOverText;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,19 @@ public class SkeeballScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*bool currentGame = true;
+        while (currentGame)
+        {
+            scoreAndBallsLeft.text = "Score: " + instance.getScore().ToString() + "\n" + "Balls Left: " + instance.getBallCount().ToString();
+            if (instance.getBallCount() == 0 && !GameObject.FindGameObjectWithTag("Skeeball"))
+                currentGame = false;
+                 
+        }
+        gameOverText.text = "GAME OVER\n Your Score: " + instance.getScore().ToString() + "\n" + "Press 'R' to play again or 'esc' to switch game";
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            instance.newGame();
+        }*/
         scoreAndBallsLeft.text = "Score: " + instance.getScore().ToString() + "\n" + "Balls Left: " + instance.getBallCount().ToString();
     }
 
@@ -62,6 +76,11 @@ public class SkeeballScore : MonoBehaviour
         {
             Destroy(this.gameObject);
             instance.addScore(100);
+        }
+        else if(collision.gameObject.name == "DespawnCollider")
+        {
+            Destroy(this.gameObject);
+            instance.addScore(0);
         }
         Destroy(this.gameObject);
 

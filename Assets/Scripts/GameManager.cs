@@ -49,7 +49,11 @@ public class GameManager : MonoBehaviour
         return this.currentScore;
     }
 
-    
+    public void newGame()
+    {
+        this.currentScore = 0;
+        this.ballCount = 10;
+    }
 
 
 
