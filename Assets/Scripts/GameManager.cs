@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-        _instance.ballCount = 10;
+        _instance.ballCount = 5;
     }
 
 
@@ -51,8 +52,7 @@ public class GameManager : MonoBehaviour
 
     public void newGame()
     {
-        this.currentScore = 0;
-        this.ballCount = 10;
+        SceneManager.LoadScene("Skeeball");
     }
 
 

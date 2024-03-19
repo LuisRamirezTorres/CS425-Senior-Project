@@ -8,35 +8,38 @@ using UnityEngine;
 public class SkeeballScore : MonoBehaviour
 {
 
-    
+    //public Canvas gameOverCanvas;
     private GameManager instance;
     public TextMeshProUGUI scoreAndBallsLeft;
-    public TextMeshProUGUI gameOverText;
+    public GameOverScreen gameOver;
     // Start is called before the first frame update
     void Start()
     {
         instance = GameManager.Instance;
-        
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*bool currentGame = true;
-        while (currentGame)
-        {
-            scoreAndBallsLeft.text = "Score: " + instance.getScore().ToString() + "\n" + "Balls Left: " + instance.getBallCount().ToString();
-            if (instance.getBallCount() == 0 && !GameObject.FindGameObjectWithTag("Skeeball"))
-                currentGame = false;
-                 
-        }
-        gameOverText.text = "GAME OVER\n Your Score: " + instance.getScore().ToString() + "\n" + "Press 'R' to play again or 'esc' to switch game";
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            instance.newGame();
-        }*/
+        
         scoreAndBallsLeft.text = "Score: " + instance.getScore().ToString() + "\n" + "Balls Left: " + instance.getBallCount().ToString();
+
+        if(instance.getBallCount() == 0 && !GameObject.FindGameObjectWithTag("Skeeball"))
+        {
+            GameOverScreen();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                instance.newGame();
+            }
+        }
+        
+        
+    }
+
+    public void GameOverScreen()
+    {
+        gameOver.SetUp();
     }
 
     private void OnTriggerEnter(Collider collision)

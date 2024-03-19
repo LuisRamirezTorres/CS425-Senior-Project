@@ -239,3 +239,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreAndBallsLeft: {fileID: 0}
+  gameOverText: {fileID: 0}
