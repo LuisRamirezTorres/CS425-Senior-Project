@@ -46,15 +46,24 @@ public class DartboardScore : MonoBehaviour
         Debug.Log("Collision detected");
         
 //        Vector3 dartPos = GameObject.Find("Tip Dart").transform.position;
+
+        // Get dart's pos after collision detected
         Vector3 dartPos = dartTip.transform.position;
         Debug.Log("dartPos: " + dartPos);
         float dartPosY = dartPos.y;
         float dartPosZ = dartPos.z;
         
+        // Get the dart's distance from the bullseye
         var distanceScore = CheckDistance(dartPos);
+        
+        // Get the dart's angle of the dartboard's collider from 0 to 360
         angle = GetDartAngle(dartPosY, dartPosZ);
         Debug.Log("Angle: " + angle);
+        
+        // Check the angle to return the correct score
         var angleScore = CheckAngle();
+        
+        // Temp score used to show pop up score when dart collides with the dartboard
         var tempScore = angleScore * distanceScore;
         currentScore += (distanceScore * angleScore);
         ShowFloatingScore(dartPos, tempScore);
