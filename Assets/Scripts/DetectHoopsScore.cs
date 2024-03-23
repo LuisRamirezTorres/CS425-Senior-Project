@@ -32,4 +32,14 @@ public class DetectHoopsScore : MonoBehaviour
             score++;
         }
     }
+    void restart()
+    {
+        if (time_remaining <= 0)
+        {
+            Debug.Log("restarting...");
+            time_remaining = 60.0f;
+            score = 0;
+
+        }
+    }
 }
