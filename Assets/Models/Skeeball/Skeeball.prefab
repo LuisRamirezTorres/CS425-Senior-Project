@@ -238,5 +238,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac3484078f5caa4b9a06d2be228bafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreAndBallsLeft: {fileID: 0}
-  gameOverText: {fileID: 0}
+  scoreAndBallsLeft: {fileID: 7884371513168469761, guid: dba3bfce3dbf37649b2e8f0953cb1ac7, type: 3}
+  gameOver: {fileID: 4037054358953645816, guid: 84c8b838c8fa3bc4182fe192056c12d0, type: 3}

@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public int currentScore;
     public int ballCount;
+    public Camera cam;
+    
+    private Vector3 cameraVec = new Vector3(-0.4f, 1f, 6f);
 
     private static GameManager _instance;
     public static GameManager Instance
@@ -29,6 +32,7 @@ public class GameManager : MonoBehaviour
     {
         _instance = this;
         _instance.ballCount = 5;
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
 
@@ -55,6 +59,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Skeeball");
     }
 
+    public void resetCamera()
+    {
+        cam.transform.position = cameraVec;
+    }
 
 
 

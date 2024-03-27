@@ -49,6 +49,7 @@ public class SkeeballScore : MonoBehaviour
         {
             Destroy(this.gameObject);
             instance.addScore(10);
+            
            
         }
         else if(collision.gameObject.name == "Collider20")
@@ -86,7 +87,7 @@ public class SkeeballScore : MonoBehaviour
             instance.addScore(0);
         }
         Destroy(this.gameObject);
-
+        instance.resetCamera();
     }
 
    
