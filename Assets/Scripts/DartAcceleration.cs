@@ -9,6 +9,7 @@ public class DartAcceleration : MonoBehaviour
     public Rigidbody dartBoardRB;
     public float x_added_speed;
     public float y_added_speed;
+    
     // Start is called before the first frame update
     void Start()
     {

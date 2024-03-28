@@ -15,7 +15,7 @@ public class DartboardScore : MonoBehaviour
     private int currentScore;
 
     private Mesh mesh;
-    Bounds bounds;
+    private Bounds bounds;
     private float colliderRadius;
     private Vector3 colliderCenter;
     private float angle;
@@ -38,34 +38,32 @@ public class DartboardScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = scoreStr + currentScore.ToString();
+        scoreText.text = scoreStr + (currentScore/2).ToString();
     }
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Collision detected");
-        
-//        Vector3 dartPos = GameObject.Find("Tip Dart").transform.position;
+        Debug.Log("Collision detected: " + collider);
 
         // Get dart's pos after collision detected
-        Vector3 dartPos = dartTip.transform.position;
+        Vector3 dartPos = collider.gameObject.transform.position;
         Debug.Log("dartPos: " + dartPos);
         float dartPosY = dartPos.y;
         float dartPosZ = dartPos.z;
         
         // Get the dart's distance from the bullseye
-        var distanceScore = CheckDistance(dartPos);
+        int distanceScore = CheckDistance(dartPos);
         
         // Get the dart's angle of the dartboard's collider from 0 to 360
         angle = GetDartAngle(dartPosY, dartPosZ);
         Debug.Log("Angle: " + angle);
         
         // Check the angle to return the correct score
-        var angleScore = CheckAngle();
+        int angleScore = CheckAngle();
         
         // Temp score used to show pop up score when dart collides with the dartboard
-        var tempScore = angleScore * distanceScore;
-        currentScore += (distanceScore * angleScore);
+        int tempScore = angleScore * distanceScore;
+        currentScore += tempScore;
         ShowFloatingScore(dartPos, tempScore);
         
     }
