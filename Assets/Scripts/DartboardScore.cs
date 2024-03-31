@@ -41,6 +41,11 @@ public class DartboardScore : MonoBehaviour
         scoreText.text = scoreStr + (currentScore/2).ToString();
     }
 
+    public int GetScore()
+    {
+        return currentScore;
+    }
+
     private void OnTriggerEnter(Collider collider)
     {
         Debug.Log("Collision detected: " + collider);

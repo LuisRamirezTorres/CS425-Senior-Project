@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Script taken from: https://www.youtube.com/watch?v=U3hovyIWBLk */
 public class DartTrajectoryLine : MonoBehaviour
 {
-    [SerializeField] 
-    private LineRenderer lineRenderer;
+    public LineRenderer lineRenderer;
 
-    [SerializeField] private float arc = -0.5f;
+    [SerializeField] 
+    private float arc = -0.01f;
 
     [SerializeField, Min(3)] 
     private int lineSegments = 60;

@@ -22,7 +22,11 @@ public class DartCount : MonoBehaviour
     {
         dartText.text = currentDarts.ToString() + dartStr;
     }
-    
+
+    public int GetDartCount()
+    {
+        return currentDarts;
+    }
 
     public void DecreaseDarts()
     {

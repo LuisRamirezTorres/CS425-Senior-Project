@@ -5,7 +5,7 @@ using UnityEngine;
 public class DartShowLine : MonoBehaviour
 {
     [SerializeField]
-    private Transform capsuleHand;
+    private Transform dart;
     
     [SerializeField] 
     private DartTrajectoryLine dartTrajectoryLine;
@@ -18,6 +18,6 @@ public class DartShowLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dartTrajectoryLine.DrawLine(capsuleHand.position, -transform.forward);
+        dartTrajectoryLine.DrawLine(dart.position, -transform.forward);
     }
 }
