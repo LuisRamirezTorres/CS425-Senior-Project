@@ -238,5 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac3484078f5caa4b9a06d2be228bafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreAndBallsLeft: {fileID: 7884371513168469761, guid: dba3bfce3dbf37649b2e8f0953cb1ac7, type: 3}
+  playerScore: {fileID: 4584982040858604227, guid: e15b9ff5726e04541a0e0e641a5add10, type: 3}
+  ballsLeft: {fileID: 4584982040858604227, guid: 5c992354a125a4948adb4863ba49ead0, type: 3}
   gameOver: {fileID: 4037054358953645816, guid: 84c8b838c8fa3bc4182fe192056c12d0, type: 3}

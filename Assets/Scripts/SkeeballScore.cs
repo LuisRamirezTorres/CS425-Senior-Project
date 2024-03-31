@@ -10,7 +10,8 @@ public class SkeeballScore : MonoBehaviour
 
     //public Canvas gameOverCanvas;
     private GameManager instance;
-    public TextMeshProUGUI scoreAndBallsLeft;
+    public TextMeshProUGUI playerScore;
+    public TextMeshProUGUI ballsLeft;
     public GameOverScreen gameOver;
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,9 @@ public class SkeeballScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        scoreAndBallsLeft.text = "Score: " + instance.getScore().ToString() + "\n" + "Balls Left: " + instance.getBallCount().ToString();
+
+        playerScore.text = "Your Score: \n" + instance.getScore().ToString();
+        ballsLeft.text = "Balls Left: \n" + instance.getBallCount().ToString(); 
 
         if(instance.getBallCount() == 0 && !GameObject.FindGameObjectWithTag("Skeeball"))
         {

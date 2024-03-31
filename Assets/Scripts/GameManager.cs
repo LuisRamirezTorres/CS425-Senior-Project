@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int currentScore;
-    public int ballCount;
+    private int currentScore;
+    private int ballCount;
     public Camera cam;
     
     private Vector3 cameraVec = new Vector3(-0.4f, 1f, 6f);
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-        _instance.ballCount = 5;
+        _instance.ballCount = 10;
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
