@@ -8,7 +8,7 @@ using UnityEngine;
 public class SkeeballScore : MonoBehaviour
 {
 
-    //public Canvas gameOverCanvas;
+    
     private GameManager instance;
     public TextMeshProUGUI playerScore;
     public TextMeshProUGUI ballsLeft;
