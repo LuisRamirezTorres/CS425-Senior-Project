@@ -29,4 +29,10 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = background;
         musicSource.Play();
     }
+
+   
+    public void StopBGM()
+    {
+        musicSource.Stop();
+    }
 }
