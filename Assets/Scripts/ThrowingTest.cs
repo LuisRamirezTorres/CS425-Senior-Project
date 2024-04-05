@@ -31,7 +31,7 @@ public class ThrowingTest : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(throwKey))
-            dart.velocity = transform.right * 2 + transform.forward * .28f + transform.up * 0.4f;
+            dart.velocity = transform.right * 2 + transform.forward * .18f + transform.up * 0.31f;
         /*if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
         {
             Throw();

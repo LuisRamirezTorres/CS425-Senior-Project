@@ -101,6 +101,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6189507147752307685}
+    - targetCorrespondingSourceObject: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 556337323453561659}
   m_SourcePrefab: {fileID: 100100000, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
 --- !u!1 &5495455744778267216 stripped
 GameObject:
@@ -272,17 +275,17 @@ MonoBehaviour:
               m_StringArgument: Accelerate
               m_BoolArgument: 1
             m_CallState: 2
-          - m_Target: {fileID: 7605180227275255439, guid: 4442135d8f84a7a4d8833c216e3a11cc, type: 3}
-            m_TargetAssemblyTypeName: UnityEngine.Component, UnityEngine
-            m_MethodName: SendMessage
-            m_Mode: 5
+          - m_Target: {fileID: 556337323453561659}
+            m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+            m_MethodName: set_enabled
+            m_Mode: 6
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: GetDartTransform
-              m_BoolArgument: 1
+              m_BoolArgument: 0
             m_CallState: 2
 --- !u!114 &-2291271204626266616
 MonoBehaviour:
@@ -314,6 +317,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dart: {fileID: 6436427310979553070}
   dartTrajectoryLine: {fileID: -2291271204626266616}
+--- !u!95 &556337323453561659
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495455744778267216}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b92e0d2e61694342bcef3300c969ec1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &6436427310979553070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1638581748493467253, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}

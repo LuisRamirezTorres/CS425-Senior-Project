@@ -55,22 +55,64 @@ public class DartboardScore : MonoBehaviour
         Debug.Log("dartPos: " + dartPos);
         float dartPosY = dartPos.y;
         float dartPosZ = dartPos.z;
+
+        if (IsBull(dartPos))
+        {
+            int bullScore = CheckBull(dartPos);
+            currentScore += bullScore;
+            ShowFloatingScore(dartPos, bullScore);
+        }
+        else
+        {
+            // Get the dart's distance from the bullseye
+            int distanceScore = CheckDistance(dartPos);
         
-        // Get the dart's distance from the bullseye
-        int distanceScore = CheckDistance(dartPos);
+            // Get the dart's angle of the dartboard's collider from 0 to 360
+            angle = GetDartAngle(dartPosY, dartPosZ);
+            Debug.Log("Angle: " + angle);
         
-        // Get the dart's angle of the dartboard's collider from 0 to 360
-        angle = GetDartAngle(dartPosY, dartPosZ);
-        Debug.Log("Angle: " + angle);
+            // Check the angle to return the correct score
+            int angleScore = CheckAngle();
         
-        // Check the angle to return the correct score
-        int angleScore = CheckAngle();
+            // Temp score used to show pop up score when dart collides with the dartboard
+            int tempScore = angleScore * distanceScore;
+            currentScore += tempScore;
+            ShowFloatingScore(dartPos, tempScore);
+        }
         
-        // Temp score used to show pop up score when dart collides with the dartboard
-        int tempScore = angleScore * distanceScore;
-        currentScore += tempScore;
-        ShowFloatingScore(dartPos, tempScore);
+    }
+
+    private int CheckBull(Vector3 dartPos)
+    {
+        var distanceScore = 0;
         
+        float dartDistanceFromCenter = Vector3.Distance(dartPos, colliderCenter);
+        Debug.Log("Dart distance from center: " + dartDistanceFromCenter);
+        
+    
+
+        if (dartDistanceFromCenter is < 0.10f and > 0.095f) // Outer Bull
+            distanceScore = 25;
+        else if (dartDistanceFromCenter is < 0.0877f and > 0.0807f) // Inner Bull
+            distanceScore = 50;
+        
+        Debug.Log("distanceScore: " + distanceScore);
+        return distanceScore;
+    }
+
+    private bool IsBull(Vector3 dartPos)
+    {
+        bool isBull = false;
+        
+        float dartDistanceFromCenter = Vector3.Distance(dartPos, colliderCenter);
+        Debug.Log("Dart distance from center: " + dartDistanceFromCenter);
+
+        if (dartDistanceFromCenter is < 0.10f and > 0.095f) // Outer Bull
+            isBull = true;
+        if (dartDistanceFromCenter is < 0.0877f and > 0.0807f) // Inner Bull
+            isBull = true;
+        
+        return isBull;
     }
 
     private float GetDartAngle(float dartPosY, float dartPosZ)
