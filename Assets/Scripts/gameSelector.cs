@@ -10,7 +10,9 @@ public class gameSelector : MonoBehaviour
     public GameObject skeeBallPanel;
     public GameObject dartsPanel;
     public static int gameCountReference;
-    // Start is called before the first frame update
+
+    private AudioManager audioManager; 
+
     void Start()
     {
         basketBallPanel.SetActive(true);
@@ -18,75 +20,25 @@ public class gameSelector : MonoBehaviour
         skeeBallPanel.SetActive(false);
         dartsPanel.SetActive(false);
         gameCountReference = 0;
+
+        // Find AudioManager instance in the scene
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void nextGame()
-    {
-        if (gameCountReference == 0)
-        {
-            bowlingPanel.SetActive(true);
-            basketBallPanel.SetActive(false);
-            gameCountReference++;
-        }
-        else if (gameCountReference == 1){
-            skeeBallPanel.SetActive(true);
-            bowlingPanel.SetActive(false);
-            gameCountReference++;
-        }
-        else if (gameCountReference == 2)
-        {
-            dartsPanel.SetActive(true);
-            skeeBallPanel.SetActive(false);
-            gameCountReference++;
-        }
-        else if (gameCountReference == 3)
-        {
-            basketBallPanel.SetActive(true);
-            dartsPanel.SetActive(false);
-            gameCountReference = 0;
-        }
-    }
-
-    public void previousGame()
-    {
-        if (gameCountReference == 0)
-        {
-            basketBallPanel.SetActive(false);
-            dartsPanel.SetActive(true);
-            gameCountReference = 3;
-        }
-        else if (gameCountReference == 1)
-        {
-            bowlingPanel.SetActive(false);
-            basketBallPanel.SetActive(true);
-            gameCountReference--;
-        }
-        else if (gameCountReference == 2)
-        {
-            skeeBallPanel.SetActive(false);
-            bowlingPanel.SetActive(true);
-            gameCountReference--;
-        }
-        else if (gameCountReference == 3)
-        {
-            dartsPanel.SetActive(false);
-            skeeBallPanel.SetActive(true);
-            gameCountReference--;
-        }
-    }
     public void playGame()
     {
+        // Stop background music before loading a new scene
+        if (audioManager != null)
+        {
+            audioManager.StopBGM();
+        }
+
+        // Load the selected game scene
         if (gameCountReference == 0)
         {
             SceneManager.LoadScene("Basketball");
         }
-
-        else if(gameCountReference == 1)
+        else if (gameCountReference == 1)
         {
             SceneManager.LoadScene("BowlingAlley");
         }
@@ -100,10 +52,10 @@ public class gameSelector : MonoBehaviour
         }
     }
 
-    public void goToMenu() 
+    public void goToMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
 
-}
 
+}
