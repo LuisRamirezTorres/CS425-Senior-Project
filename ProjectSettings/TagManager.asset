@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Tip Dart
+  - Ball
+  - Skeeball
   layers:
   - Default
   - TransparentFX
