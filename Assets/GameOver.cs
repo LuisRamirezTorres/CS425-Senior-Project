@@ -22,7 +22,7 @@ public class GameOver : MonoBehaviour
     public void Setup(int score)
     {
         gameObject.SetActive(true);
-        pointsText.text = score.ToString() + " Points";
+        pointsText.text = (score / 2).ToString() + " Points";
     }
 
     public void NewGame()

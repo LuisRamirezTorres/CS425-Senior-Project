@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4643373916963244564, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4643373916963244564, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
       propertyPath: m_Materials.Array.data[3]
@@ -176,6 +176,7 @@ MonoBehaviour:
   dartBoardRB: {fileID: 3336312929181936255, guid: 4ab7183c27fcd254fa33bf1f8b7e9fad, type: 3}
   x_added_speed: 3.5
   y_added_speed: 2
+  turn: 2
 --- !u!114 &606651303766550789
 MonoBehaviour:
   m_ObjectHideFlags: 0

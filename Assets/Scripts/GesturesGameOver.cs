@@ -14,11 +14,6 @@ public class GesturesGameOver : MonoBehaviour
     private GameOver gameOver;
     
     private bool isExtended;
-
-    /*private void Awake()
-    {
-        instance = this;
-    }*/
     
     public void Setup()
     {
