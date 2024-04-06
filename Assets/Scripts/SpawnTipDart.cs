@@ -10,20 +10,34 @@ using static Leap.Unity.Detector;
 // https://docs.ultraleap.com/xr-and-tabletop/xr/unity/plugin/features/scripting-fundamentals.html
 public class SpawnTipDart : MonoBehaviour
 {
-    public GameObject dartPrefab;
-    GameObject dartInstance;
-    public Vector3 dartPos;
-    public Quaternion dartOrientation;
     
+    [SerializeField]
+    private Vector3 dartPos;
+    
+    [SerializeField]
+    private Quaternion dartOrientation;
+    
+    [SerializeField]
+    private DartCount dartCount;
+    
+    [SerializeField]
+    private GameOver gameOver;
+    
+    [SerializeField]
+    private GesturesGameOver gestures;
+    
+    [SerializeField]
+    private DartboardScore score;
+    
+    private GameObject dartInstance;
+    private bool isInstantiated;
+
+    public LineRenderer dartLine;
     public LeapProvider leapProvider;
-    public DartCount dartCount;
-    
-    public bool isInstantiated;
-    public int throwCount;
+    public GameObject dartPrefab;
     
     void Start()
     {
-        throwCount = 0;
         dartPos = dartPrefab.transform.position;  // Get current dart pos
         dartOrientation = dartPrefab.transform.rotation; // Get current dart orientation
     }
@@ -51,6 +65,11 @@ public class SpawnTipDart : MonoBehaviour
 
     void OnUpdateHand(Hand _hand)
     {
+        if (dartCount.GetDartCount() == -1)
+        {
+            gameOver.Setup(score.GetScore());
+            gestures.Setup();
+        }
         
         // To respawn a dart, the left hand must be open, then unopened.
         if (IsExtended(_hand) && !isInstantiated)
@@ -70,8 +89,12 @@ public class SpawnTipDart : MonoBehaviour
     public void SpawnDart()
     {
         dartInstance = Instantiate(dartPrefab, dartPos, dartOrientation);
+        
+        // Get dart's DartTrajectoryLine component information and pass dartLine
+        var dtl = dartInstance.GetComponent<DartTrajectoryLine>();
+        dtl.lineRenderer = dartLine;
+        
         Debug.Log("Instantiating new Tip Dart");
-        throwCount++;
     }
 
     bool IsExtended(Hand _hand)
@@ -96,5 +119,6 @@ public class SpawnTipDart : MonoBehaviour
 
         return isHandOpen;
     }
+    
     
 }

@@ -22,13 +22,19 @@ public class DartCount : MonoBehaviour
     {
         dartText.text = currentDarts.ToString() + dartStr;
     }
-    
+
+    public int GetDartCount()
+    {
+        return currentDarts;
+    }
 
     public void DecreaseDarts()
     {
         currentDarts--;
         dartText.text = currentDarts.ToString() + dartStr;
         Debug.Log("Decreasing Dart Count to: " + dartText.text);
+        if (GetDartCount() == -1)
+            dartText.text = 0 + dartStr;
     }
     
 }

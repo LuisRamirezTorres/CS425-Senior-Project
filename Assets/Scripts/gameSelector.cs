@@ -2,108 +2,79 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class gameSelector : MonoBehaviour
 {
-    public GameObject basketBallPanel;
-    public GameObject bowlingPanel;
-    public GameObject skeeBallPanel;
-    public GameObject dartsPanel;
+    
+    public GameObject selectionPanel;
     public static int gameCountReference;
-    // Start is called before the first frame update
+
+    private AudioManager audioManager; 
+
     void Start()
     {
-        basketBallPanel.SetActive(true);
-        bowlingPanel.SetActive(false);
-        skeeBallPanel.SetActive(false);
-        dartsPanel.SetActive(false);
-        gameCountReference = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
+        selectionPanel.SetActive(true);
+        gameCountReference = 0;
+
+        // Find AudioManager instance in the scene
+        audioManager = FindObjectOfType<AudioManager>();
     }
-    public void nextGame()
+
+    public void chooseGame()
     {
-        if (gameCountReference == 0)
+        string ClickedButtonName = EventSystem.current.currentSelectedGameObject.name;
+
+        if (ClickedButtonName == "playBasketball")
         {
-            bowlingPanel.SetActive(true);
-            basketBallPanel.SetActive(false);
-            gameCountReference++;
-        }
-        else if (gameCountReference == 1){
-            skeeBallPanel.SetActive(true);
-            bowlingPanel.SetActive(false);
-            gameCountReference++;
-        }
-        else if (gameCountReference == 2)
-        {
-            dartsPanel.SetActive(true);
-            skeeBallPanel.SetActive(false);
-            gameCountReference++;
-        }
-        else if (gameCountReference == 3)
-        {
-            basketBallPanel.SetActive(true);
-            dartsPanel.SetActive(false);
             gameCountReference = 0;
+            playGame();
+        }
+        else if (ClickedButtonName == "playSkeeball")
+        {
+            gameCountReference = 1;
+            playGame();
+        }
+        else if (ClickedButtonName == "playDarts")
+        {
+            gameCountReference = 2;
+            playGame();
+        }
+
+        else if(ClickedButtonName == "menuButton")
+        {
+            goToMenu();
         }
     }
 
-    public void previousGame()
-    {
-        if (gameCountReference == 0)
-        {
-            basketBallPanel.SetActive(false);
-            dartsPanel.SetActive(true);
-            gameCountReference = 3;
-        }
-        else if (gameCountReference == 1)
-        {
-            bowlingPanel.SetActive(false);
-            basketBallPanel.SetActive(true);
-            gameCountReference--;
-        }
-        else if (gameCountReference == 2)
-        {
-            skeeBallPanel.SetActive(false);
-            bowlingPanel.SetActive(true);
-            gameCountReference--;
-        }
-        else if (gameCountReference == 3)
-        {
-            dartsPanel.SetActive(false);
-            skeeBallPanel.SetActive(true);
-            gameCountReference--;
-        }
-    }
     public void playGame()
     {
+        // Stop background music before loading a new scene
+        if (audioManager != null)
+        {
+            audioManager.StopBGM();
+        }
+
+        // Load the selected game scene
         if (gameCountReference == 0)
         {
             SceneManager.LoadScene("Basketball");
         }
-
-        else if(gameCountReference == 1)
-        {
-            SceneManager.LoadScene("BowlingAlley");
-        }
-        else if (gameCountReference == 2)
+        else if (gameCountReference == 1)
         {
             SceneManager.LoadScene("Skeeball");
         }
-        else if (gameCountReference == 3)
+        else if (gameCountReference == 2)
         {
             SceneManager.LoadScene("Darts");
         }
     }
 
-    public void goToMenu() 
+    public void goToMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
 
-}
 
+}
