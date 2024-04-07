@@ -12,6 +12,10 @@ public class DetectHoopsScore : MonoBehaviour
     private bool collider_disabled = false;
     public TextMeshProUGUI score_text;
     public GameObject basketballMachine;
+    private bool game_started = true;
+    public GameObject gameOverScreen;
+    public TextMeshProUGUI gameOverText;
+    public HoopsGameloopController gameloopController;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,14 @@ public class DetectHoopsScore : MonoBehaviour
     {
         time_remaining -= Time.deltaTime;
         score_text.text = "Score: " + score.ToString() + "\n" + "Time: " + Math.Max(Math.Floor(time_remaining), 0).ToString();
+        if (time_remaining <= 0 && game_started)
+        {
+            game_started = false;
+            gameOverScreen.SetActive(true);
+            gameOverText.text = "Score: " + score.ToString();
+            gameloopController.enabled = true;
+
+        }
         if (collider_disabled && disable_time > 0)
         {
             disable_time -= Time.deltaTime;
@@ -53,6 +65,10 @@ public class DetectHoopsScore : MonoBehaviour
             Debug.Log("restarting...");
             time_remaining = 60.0f;
             score = 0;
+            game_started = true;
+            gameOverScreen.SetActive(false);
+            gameloopController.enabled = false;
+
 
         }
     }

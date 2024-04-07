@@ -43,14 +43,52 @@ public class HoopsGameloopController : MonoBehaviour
     {
         Finger _thumb = left_hand.GetThumb();
 
+        //Debug.Log("thumb id  " + _thumb.Id);
         Finger right_thumb = right_hand.GetThumb();
-        if (_thumb.IsExtended && right_thumb.IsExtended)
+        if (OnlyThumbsExtended(left_hand, right_hand))
         {
             Debug.Log("Extended thumbs");
             gameloop.SendMessage("restart");
         }
 
     }
+    bool OnlyThumbsExtended(Hand left, Hand right)
+    {
+        foreach (Finger finger in left.Fingers)
+        {
+            if (finger.Type == Finger.FingerType.TYPE_THUMB)
+            {
+                if (!finger.IsExtended)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                if (finger.IsExtended)
+                {
+                    return false;
+                }
+            }
+        }
+        foreach (Finger finger in right.Fingers)
+        {
+            if (finger.Type == Finger.FingerType.TYPE_THUMB)
+            {
+                if (!finger.IsExtended)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                if (finger.IsExtended)
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
 
-
+    }
 }
