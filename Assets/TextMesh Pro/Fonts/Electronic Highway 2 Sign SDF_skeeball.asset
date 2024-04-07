@@ -60,9 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Electronic Highway 2 Sign SDF_skeeball
   m_EditorClassIdentifier: 
-  hashCode: -897954953
+  hashCode: 1308143379
   material: {fileID: 157522546215193471}
-  materialHashCode: -1116256393
+  materialHashCode: -384032557
   m_Version: 1.1.0
   m_SourceFontFileGUID: 8a2b9e2a607dd2143b58c44bc32410b4
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
