@@ -10,19 +10,38 @@ public class SkeeballScore : MonoBehaviour
 
     
     private GameManager instance;
-    public TextMeshProUGUI scoreAndBallsLeft;
+    public TextMeshProUGUI playerScore;
+    public TextMeshProUGUI ballsLeft;
+    public GameOverScreen gameOver;
     // Start is called before the first frame update
     void Start()
     {
         instance = GameManager.Instance;
-        
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreAndBallsLeft.text = "Score: " + instance.getScore().ToString() + "\n" + "Balls Left: " + instance.getBallCount().ToString();
+
+        playerScore.text = "Your Score: \n" + instance.getScore().ToString();
+        ballsLeft.text = "Balls Left: \n" + instance.getBallCount().ToString(); 
+
+        if(instance.getBallCount() == 0 && !GameObject.FindGameObjectWithTag("Skeeball"))
+        {
+            GameOverScreen();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                instance.newGame();
+            }
+        }
+        
+        
+    }
+
+    public void GameOverScreen()
+    {
+        gameOver.SetUp();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -32,6 +51,7 @@ public class SkeeballScore : MonoBehaviour
         {
             Destroy(this.gameObject);
             instance.addScore(10);
+            
            
         }
         else if(collision.gameObject.name == "Collider20")
@@ -63,8 +83,13 @@ public class SkeeballScore : MonoBehaviour
             Destroy(this.gameObject);
             instance.addScore(100);
         }
+        else if(collision.gameObject.name == "DespawnCollider")
+        {
+            Destroy(this.gameObject);
+            instance.addScore(0);
+        }
         Destroy(this.gameObject);
-
+        instance.resetCamera();
     }
 
    
