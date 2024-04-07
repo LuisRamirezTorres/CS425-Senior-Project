@@ -8,7 +8,7 @@ public class WelcomeScreen : MonoBehaviour
     // Start is called before the first frame update
     public void enterGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MainMenu");
     }
 
     // Update is called once per frame
