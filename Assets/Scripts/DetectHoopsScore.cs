@@ -11,11 +11,16 @@ public class DetectHoopsScore : MonoBehaviour
     private float disable_time = 0.25f;
     private bool collider_disabled = false;
     public TextMeshProUGUI score_text;
+    public TextMeshProUGUI timer_text;
+
     public GameObject basketballMachine;
     private bool game_started = true;
     public GameObject gameOverScreen;
     public TextMeshProUGUI gameOverText;
     public HoopsGameloopController gameloopController;
+    public GameObject confetti;
+    private bool throwing_confetti = false;
+    private float confetti_timer = 1.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +31,8 @@ public class DetectHoopsScore : MonoBehaviour
     void Update()
     {
         time_remaining -= Time.deltaTime;
-        score_text.text = "Score: " + score.ToString() + "\n" + "Time: " + Math.Max(Math.Floor(time_remaining), 0).ToString();
+        score_text.text = score.ToString();
+        timer_text.text = Math.Max(Math.Floor(time_remaining), 0).ToString();
         if (time_remaining <= 0 && game_started)
         {
             game_started = false;
@@ -45,6 +51,17 @@ public class DetectHoopsScore : MonoBehaviour
             basketballMachine.GetComponent<MeshCollider>().enabled = true;
             disable_time = 0.25f;
         }
+        if (throwing_confetti && confetti_timer > 0)
+        {
+            confetti_timer -= Time.deltaTime;
+        }
+        if (throwing_confetti && confetti_timer <= 0)
+        {
+            throwing_confetti = false;
+            confetti.SetActive(false);
+            confetti_timer = 1.5f;
+
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -57,6 +74,8 @@ public class DetectHoopsScore : MonoBehaviour
         }
         basketballMachine.GetComponent<MeshCollider>().enabled = false;
         collider_disabled = true;
+        throwing_confetti = true;
+        confetti.SetActive(true);
     }
     void restart()
     {
