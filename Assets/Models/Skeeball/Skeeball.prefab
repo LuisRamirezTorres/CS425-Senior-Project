@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeeball: {fileID: 5943708121646268294}
-  xSpeed: 10
+  xSpeed: 5
   ySpeed: 0
 --- !u!114 &-4821824001572768551
 MonoBehaviour:
@@ -238,4 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac3484078f5caa4b9a06d2be228bafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreAndBallsLeft: {fileID: 2904466250545820655, guid: d2b7ffe62c0badf4d8cd5bf7f0973900, type: 3}
+  playerScore: {fileID: 0}
+  ballsLeft: {fileID: 0}
+  gameOver: {fileID: 0}
