@@ -2318,52 +2318,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2.1244345, z: 0.1040294}
   m_Center: {x: 0, y: -0.06032189, z: 0.17303701}
---- !u!1 &249353885
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 249353887}
-  - component: {fileID: 249353886}
-  m_Layer: 0
-  m_Name: BallSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &249353886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249353885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9d6dd979c28bfa48b34597c735c9856, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeeball: {fileID: 8322522202045277647, guid: 664fe4a8b4c5e4f4b9945e0376b5e386, type: 3}
-  rigidbody: {fileID: 5943708121646268294, guid: 664fe4a8b4c5e4f4b9945e0376b5e386, type: 3}
---- !u!4 &249353887
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249353885}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.2668571, y: 54.371754, z: 83.95497}
-  m_LocalScale: {x: 66.78753, y: 66.78756, z: 66.78753}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 314377285}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &250177528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3524,6 +3478,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 149.4
       objectReference: {fileID: 0}
+    - target: {fileID: 1152952354099249450, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152952354099249450, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 51.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152952354099249450, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 108.24
+      objectReference: {fileID: 0}
     - target: {fileID: 3474916237208331212, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
       propertyPath: m_Name
       value: NewSkee-Ball Home Arcade Premium
@@ -3575,9 +3541,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4283681104381770102, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 249353887}
     - targetCorrespondingSourceObject: {fileID: 4283681104381770102, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
       insertIndex: -1
       addedObject: {fileID: 561667412}
@@ -11905,7 +11868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1152595175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14798,13 +14761,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367887192}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.05726277, y: 0.7047844, z: -0.05726277, w: 0.7047844}
-  m_LocalPosition: {x: -0.584, y: 1.128, z: 6}
+  m_LocalRotation: {x: 0.047478423, y: 0.70551103, z: -0.047478423, w: 0.70551103}
+  m_LocalPosition: {x: -0.806, y: 1.128, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 9.29, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.7, y: 90, z: 0}
 --- !u!114 &1367887196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14818,7 +14781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 8682479089068189441}
-  offset: {x: -0.7, y: 0.2, z: 0}
+  offset: {x: -1.5, y: 0.4, z: 0}
 --- !u!1 &1379814465
 GameObject:
   m_ObjectHideFlags: 0
