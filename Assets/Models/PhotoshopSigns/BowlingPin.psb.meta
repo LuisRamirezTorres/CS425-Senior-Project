@@ -105,7 +105,7 @@ ScriptedImporter:
       y: 4
       width: 307
       height: 754
-    spriteID: b2bee7534acc4d148878df0213e4325b
+    spriteID: 4a413a66afed81740b271678f829ed8f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,7 +153,7 @@ ScriptedImporter:
     spriteName: Bowling Pin
     isGroup: 0
     parentIndex: -1
-    spriteID: b2bee7534acc4d148878df0213e4325b
+    spriteID: 4a413a66afed81740b271678f829ed8f
     layerID: 34
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
