@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using TMPro.Examples;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +11,8 @@ public class GameManager : MonoBehaviour
     public int currentScore;
     public int ballCount;
     public Camera cam;
+    public GameObject floatText;
+    public int tempScore;
 
     private Vector3 cameraVec = new Vector3(-0.4f, 1f, 6f);
 
@@ -40,6 +44,11 @@ public class GameManager : MonoBehaviour
     {
 
         this.currentScore += score;
+        this.tempScore = score;
+        
+        var text = Instantiate(floatText, this.transform.position, Quaternion.Euler(0f, 90f, 0));
+        text.GetComponent<TMP_Text>().text = tempScore.ToString();
+        
         this.ballCount--;
 
     }
@@ -65,6 +74,16 @@ public class GameManager : MonoBehaviour
         cam.transform.position = cameraVec;
     }
     
+    //public void showFloatingText()
+    //{
+    //    var text = Instantiate(floatText, this.transform.position, Quaternion.Euler(0f,90f,0f), this.transform);
+
+    //    text.GetComponent<TMP_Text>().text = this.tempScore.ToString();
+
+
+        //var newtext = text.ConvertTo<TextMeshPro>();
+        //newtext.GetComponent<TextMeshPro>().text = points.ToString();
+    //}
 
 
 
