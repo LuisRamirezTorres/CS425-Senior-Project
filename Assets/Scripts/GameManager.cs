@@ -66,7 +66,9 @@ public class GameManager : MonoBehaviour
 
     public void newGame()
     {
-        SceneManager.LoadScene("Skeeball");
+        _instance.ballCount = 10;
+        _instance.currentScore = 0;
+        GameObject.Find("Background").gameObject.SetActive(false);
     }
 
     public void resetCamera()
