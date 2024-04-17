@@ -177,6 +177,9 @@ MonoBehaviour:
   x_added_speed: 3.5
   y_added_speed: 2
   turn: 2
+  audioSource: {fileID: 8525650512320856352, guid: 918a2836c2ad7194e836ca4947572466, type: 3}
+  sfx: {fileID: 8300000, guid: 217a78e46dbb04f43b32c24e4da1463f, type: 3}
+  spawnDart: {fileID: 9119530618839171893, guid: 042da851e640c57489821366acbc2400, type: 3}
 --- !u!114 &606651303766550789
 MonoBehaviour:
   m_ObjectHideFlags: 0

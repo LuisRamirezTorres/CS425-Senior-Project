@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ThrowingTest : MonoBehaviour
 {
+    public float y;
+    public float x;
+    
     [Header("References")] 
     public Transform cam;
     public Transform attackPoint;
@@ -19,6 +22,7 @@ public class ThrowingTest : MonoBehaviour
     public float throwForce;
     public float throwUpwardForce;
 
+
     bool readyToThrow;
     
     // Start is called before the first frame update
@@ -31,7 +35,7 @@ public class ThrowingTest : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(throwKey))
-            dart.velocity = transform.right * 2 + transform.forward * .18f + transform.up * 0.31f;
+            dart.velocity = transform.right * 2 + transform.forward * y + transform.up * x;
         /*if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
         {
             Throw();

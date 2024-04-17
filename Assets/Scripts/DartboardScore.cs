@@ -7,7 +7,6 @@ using UnityEngine;
 public class DartboardScore : MonoBehaviour
 {
     public GameObject floatingScorePrefab;
-    public GameObject dartTip;
     public TMP_Text scoreText;
     public string scoreStr = "Score: ";
     public MeshCollider meshCollider;
@@ -19,6 +18,9 @@ public class DartboardScore : MonoBehaviour
     private float colliderRadius;
     private Vector3 colliderCenter;
     private float angle;
+    
+    public AudioSource audioSource;
+    public AudioClip sfx;
     
     // Start is called before the first frame update
     void Start()
@@ -38,7 +40,7 @@ public class DartboardScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = scoreStr + (currentScore/2).ToString();
+        scoreText.text = scoreStr + (currentScore).ToString();
     }
 
     public int GetScore()
@@ -49,6 +51,9 @@ public class DartboardScore : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         Debug.Log("Collision detected: " + collider);
+        
+        audioSource.clip = sfx;
+        audioSource.Play();
 
         // Get dart's pos after collision detected
         Vector3 dartPos = collider.gameObject.transform.position;
@@ -79,7 +84,10 @@ public class DartboardScore : MonoBehaviour
             currentScore += tempScore;
             ShowFloatingScore(dartPos, tempScore);
         }
-        
+
+        collider.gameObject.transform.rotation = Quaternion.Euler(0,-90,0);
+        collider.gameObject.GetComponent<Collider>().enabled = false;
+
     }
 
     private int CheckBull(Vector3 dartPos)
@@ -91,9 +99,9 @@ public class DartboardScore : MonoBehaviour
         
     
 
-        if (dartDistanceFromCenter is < 0.10f and > 0.095f) // Outer Bull
+        if (dartDistanceFromCenter is < 0.0999f and > 0.0795f) // Outer Bull
             distanceScore = 25;
-        else if (dartDistanceFromCenter is < 0.0877f and > 0.0807f) // Inner Bull
+        else if (dartDistanceFromCenter is < 0.0850f and > 0.0794f) // Inner Bull
             distanceScore = 50;
         
         Debug.Log("distanceScore: " + distanceScore);
@@ -107,9 +115,9 @@ public class DartboardScore : MonoBehaviour
         float dartDistanceFromCenter = Vector3.Distance(dartPos, colliderCenter);
         Debug.Log("Dart distance from center: " + dartDistanceFromCenter);
 
-        if (dartDistanceFromCenter is < 0.10f and > 0.095f) // Outer Bull
+        if (dartDistanceFromCenter is < 0.0999f and > 0.0795f) // Outer Bull
             isBull = true;
-        if (dartDistanceFromCenter is < 0.0877f and > 0.0807f) // Inner Bull
+        if (dartDistanceFromCenter is < 0.0850f and > 0.0794f) // Inner Bull
             isBull = true;
         
         return isBull;
@@ -146,8 +154,12 @@ public class DartboardScore : MonoBehaviour
     {
         var angleScore = 0;
         
-        if (angle is < 351.0f and > 9.0f)
+        if (angle is < 360.0f and > 351.0f)
             angleScore = 11;
+        if (angle is < 9.0f and > 0.0f)
+            angleScore = 11;
+        /*if (angle is < 351.0f and > 9.0f)
+            angleScore = 11;*/
         if (angle is < 27.0f and > 9.0f)
             angleScore = 14;
         if (angle is < 45.0f and > 27.0f)
