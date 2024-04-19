@@ -4048,8 +4048,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'How To Play:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 021e555d11f89ed4dbe7863e121ec63c, type: 2}
-  m_sharedMaterial: {fileID: -2059287171728213048, guid: 021e555d11f89ed4dbe7863e121ec63c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9380,8 +9380,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 021e555d11f89ed4dbe7863e121ec63c, type: 2}
-  m_sharedMaterial: {fileID: -2059287171728213048, guid: 021e555d11f89ed4dbe7863e121ec63c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17912,8 +17912,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 021e555d11f89ed4dbe7863e121ec63c, type: 2}
-  m_sharedMaterial: {fileID: -2059287171728213048, guid: 021e555d11f89ed4dbe7863e121ec63c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18187,8 +18187,8 @@ MonoBehaviour:
   m_text: 1) Start with an open hand and hover over it over the controller until
     visible
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 021e555d11f89ed4dbe7863e121ec63c, type: 2}
-  m_sharedMaterial: {fileID: -2059287171728213048, guid: 021e555d11f89ed4dbe7863e121ec63c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21930,8 +21930,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Welcome To VRCade Suite: Skeeball'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c509f3e862ce88c48bc60f4fb964b1e6, type: 2}
-  m_sharedMaterial: {fileID: -2059287171728213048, guid: c509f3e862ce88c48bc60f4fb964b1e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -26583,6 +26583,10 @@ PrefabInstance:
     - target: {fileID: 1076958566352922822, guid: d9d09c32a19b1c345873c09ff96d81ba, type: 3}
       propertyPath: m_Name
       value: FloatingScore_Skeeball
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076958566352922822, guid: d9d09c32a19b1c345873c09ff96d81ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1076958566352922822, guid: d9d09c32a19b1c345873c09ff96d81ba, type: 3}
       propertyPath: m_TagString
