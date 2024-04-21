@@ -64,7 +64,7 @@ public class GesturesGameOver : MonoBehaviour
         
         Finger _thumb = _hand.GetThumb();
         bool isThumb = _thumb.IsExtended;
-
+        
         if (isThumb)
             isThumbsUp = true;
         else

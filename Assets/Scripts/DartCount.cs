@@ -9,7 +9,10 @@ public class DartCount : MonoBehaviour
     public static DartCount instance;
     
     public TMP_Text dartText;
-    public int currentDarts = 10;
+    
+    [SerializeField]
+    private int currentDarts = 2;
+    
     public string dartStr = " Darts";
 
     private void Awake()

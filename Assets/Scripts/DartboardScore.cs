@@ -1,15 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class DartboardScore : MonoBehaviour
 {
     public GameObject floatingScorePrefab;
+    public GameObject resetCamera;
+    public GameObject setCamera;
     public TMP_Text scoreText;
     public string scoreStr = "Score: ";
     public MeshCollider meshCollider;
+    public Camera mainCamera;
+    public Vector3 dartPrefabPos;
 
     private int currentScore;
 
@@ -17,6 +18,9 @@ public class DartboardScore : MonoBehaviour
     private Bounds bounds;
     private float colliderRadius;
     private Vector3 colliderCenter;
+    
+    public Vector3 cameraPos;
+    
     private float angle;
     
     public AudioSource audioSource;
@@ -27,6 +31,8 @@ public class DartboardScore : MonoBehaviour
     {
         currentScore = 0;
         scoreText.text = scoreStr + currentScore.ToString();
+
+        cameraPos = mainCamera.transform.position;
 
         meshCollider = GetComponent<MeshCollider>();
         colliderCenter = meshCollider.bounds.center;
@@ -54,9 +60,16 @@ public class DartboardScore : MonoBehaviour
         
         audioSource.clip = sfx;
         audioSource.Play();
-
+        
         // Get dart's pos after collision detected
         Vector3 dartPos = collider.gameObject.transform.position;
+        dartPrefabPos = dartPos;
+//        Camera.main.transform.position = dartPos - Vector3.right;
+        /*mainCamera.transform.position = dartPos - Vector3.right;*/
+        setCamera.SetActive(true);
+        resetCamera.SetActive(true);
+        
+//        StartCoroutine(resetCamera.ResetCameraPosition(mainCamera, cameraPos));
         Debug.Log("dartPos: " + dartPos);
         float dartPosY = dartPos.y;
         float dartPosZ = dartPos.z;
@@ -97,12 +110,13 @@ public class DartboardScore : MonoBehaviour
         float dartDistanceFromCenter = Vector3.Distance(dartPos, colliderCenter);
         Debug.Log("Dart distance from center: " + dartDistanceFromCenter);
         
-    
-
-        if (dartDistanceFromCenter is < 0.0999f and > 0.0795f) // Outer Bull
-            distanceScore = 25;
-        else if (dartDistanceFromCenter is < 0.0850f and > 0.0794f) // Inner Bull
+        if (dartDistanceFromCenter is <= 0.0963f and > 0f) // Inner Bull
             distanceScore = 50;
+
+        /*if (dartDistanceFromCenter is 0.10f and > 0.095f) // Outer Bull
+            distanceScore = 25;
+        else if (dartDistanceFromCenter is < 0.0877f and > 0f) // Inner Bull
+            distanceScore = 50;*/
         
         Debug.Log("distanceScore: " + distanceScore);
         return distanceScore;
@@ -115,10 +129,18 @@ public class DartboardScore : MonoBehaviour
         float dartDistanceFromCenter = Vector3.Distance(dartPos, colliderCenter);
         Debug.Log("Dart distance from center: " + dartDistanceFromCenter);
 
-        if (dartDistanceFromCenter is < 0.0999f and > 0.0795f) // Outer Bull
+        if (dartDistanceFromCenter is <= 0.0963f and > 0f) // Inner Bull
             isBull = true;
-        if (dartDistanceFromCenter is < 0.0850f and > 0.0794f) // Inner Bull
+        
+        /*if (dartDistanceFromCenter is < 0.10f and > 0.095f) // Outer Bull
             isBull = true;
+        if (dartDistanceFromCenter is < 0.0877f and > 0.0807f) // Inner Bull
+            isBull = true;*/
+
+        /*if (dartDistanceFromCenter is 0.10f and > 0.095f) // Outer Bull
+            isBull = true;
+        if (dartDistanceFromCenter is < 0.0877f and > 0f) // Inner Bull
+            isBull = true;*/
         
         return isBull;
     }
@@ -139,7 +161,7 @@ public class DartboardScore : MonoBehaviour
         
     
 
-        if (dartDistanceFromCenter is < 0.43f and > 0.37f)
+        if (dartDistanceFromCenter is <= 0.43f and > 0.37f)
             distanceScore = 3;
         else if (dartDistanceFromCenter is < 0.65f and > 0.60f)
             distanceScore = 2;

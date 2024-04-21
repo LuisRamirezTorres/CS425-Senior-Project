@@ -85,7 +85,7 @@ public class SpawnTipDart : MonoBehaviour
 
     void OnUpdateHand(Hand _hand)
     {
-        if (dartCount.GetDartCount() == -1)
+        if (dartCount.GetDartCount() == 0)
         {
             gameOver.Setup(score.GetScore());
             gestures.Setup();
