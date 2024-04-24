@@ -13,12 +13,7 @@ public class ResetCamera : MonoBehaviour
     
     [SerializeField] 
     private Camera mainCamera;
-
-    /*private void Start()
-    {
-        StartCoroutine(ResetCameraPosition(cameraPos, mainCamera));
-    }*/
-
+    
     private void Update()
     {
         StartCoroutine(ResetCameraPosition(cameraPos, mainCamera));

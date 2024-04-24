@@ -8,7 +8,6 @@ using UnityEngine;
 public class GesturesGameOver : MonoBehaviour
 {
     public LeapProvider leapProvider;
-//    private static GesturesGameOver instance;
     
     [SerializeField]
     private GameOver gameOver;

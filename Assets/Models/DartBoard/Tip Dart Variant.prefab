@@ -191,7 +191,7 @@ MonoBehaviour:
   turn: 2
   audioSource: {fileID: 8525650512320856352, guid: 918a2836c2ad7194e836ca4947572466, type: 3}
   sfx: {fileID: 8300000, guid: 217a78e46dbb04f43b32c24e4da1463f, type: 3}
-  spawnDart: {fileID: 9119530618839171893, guid: 042da851e640c57489821366acbc2400, type: 3}
+  spawnDart: {fileID: 5267130590091222858, guid: 1874e7de911f297469ad12e492a21d18, type: 3}
 --- !u!114 &606651303766550789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 8505456127051198413, guid: f5284992187845a4991d6c343b17151c, type: 3}
-  arc: -0.01
+  arc: 0
   lineSegments: 60
   timeOfFlight: 5
 --- !u!114 &6189507147752307685

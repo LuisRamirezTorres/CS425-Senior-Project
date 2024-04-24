@@ -8,7 +8,8 @@ public class DartCount : MonoBehaviour
 {
     public static DartCount instance;
     
-    public TMP_Text dartText;
+    [SerializeField]
+    private TMP_Text dartText;
     
     [SerializeField]
     private int currentDarts = 2;

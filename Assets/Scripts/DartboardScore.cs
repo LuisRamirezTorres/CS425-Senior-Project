@@ -3,28 +3,45 @@ using UnityEngine;
 
 public class DartboardScore : MonoBehaviour
 {
-    public GameObject floatingScorePrefab;
-    public GameObject resetCamera;
-    public GameObject setCamera;
-    public TMP_Text scoreText;
-    public string scoreStr = "Score: ";
-    public MeshCollider meshCollider;
-    public Camera mainCamera;
+    [Header("References")]
+    [SerializeField]
+    private GameObject floatingScorePrefab;
+    
+    [SerializeField]
+    private GameObject resetCamera;
+    
+    [SerializeField]
+    private GameObject setCamera;
+    
+    [SerializeField]
+    private TMP_Text scoreText;
+    
+    [SerializeField]
+    private string scoreStr = "Score: ";
+    
+    [SerializeField]
+    private MeshCollider meshCollider;
+    
+    [SerializeField]
+    private Camera mainCamera;
+    
+    public Vector3 cameraPos;
     public Vector3 dartPrefabPos;
 
     private int currentScore;
-
     private Mesh mesh;
     private Bounds bounds;
     private float colliderRadius;
     private Vector3 colliderCenter;
     
-    public Vector3 cameraPos;
-    
     private float angle;
     
-    public AudioSource audioSource;
-    public AudioClip sfx;
+    [Header("Audio")]
+    [SerializeField]
+    private AudioSource audioSource;
+    
+    [SerializeField]
+    private AudioClip sfx;
     
     // Start is called before the first frame update
     void Start()
@@ -64,16 +81,17 @@ public class DartboardScore : MonoBehaviour
         // Get dart's pos after collision detected
         Vector3 dartPos = collider.gameObject.transform.position;
         dartPrefabPos = dartPos;
-//        Camera.main.transform.position = dartPos - Vector3.right;
-        /*mainCamera.transform.position = dartPos - Vector3.right;*/
+        
+        // Transform MainCamera to collider's position
         setCamera.SetActive(true);
+        // Transform MainCamera to original position
         resetCamera.SetActive(true);
         
-//        StartCoroutine(resetCamera.ResetCameraPosition(mainCamera, cameraPos));
         Debug.Log("dartPos: " + dartPos);
         float dartPosY = dartPos.y;
         float dartPosZ = dartPos.z;
-
+        
+        // Check if collider hit bullseye
         if (IsBull(dartPos))
         {
             int bullScore = CheckBull(dartPos);
@@ -99,6 +117,7 @@ public class DartboardScore : MonoBehaviour
         }
 
         collider.gameObject.transform.rotation = Quaternion.Euler(0,-90,0);
+        // Disable dart collider so darts can't stack on top of each other
         collider.gameObject.GetComponent<Collider>().enabled = false;
 
     }
@@ -107,16 +126,12 @@ public class DartboardScore : MonoBehaviour
     {
         var distanceScore = 0;
         
+        // Get the distance between the dart and center of dartboard
         float dartDistanceFromCenter = Vector3.Distance(dartPos, colliderCenter);
         Debug.Log("Dart distance from center: " + dartDistanceFromCenter);
         
         if (dartDistanceFromCenter is <= 0.0963f and > 0f) // Inner Bull
             distanceScore = 50;
-
-        /*if (dartDistanceFromCenter is 0.10f and > 0.095f) // Outer Bull
-            distanceScore = 25;
-        else if (dartDistanceFromCenter is < 0.0877f and > 0f) // Inner Bull
-            distanceScore = 50;*/
         
         Debug.Log("distanceScore: " + distanceScore);
         return distanceScore;
@@ -129,24 +144,15 @@ public class DartboardScore : MonoBehaviour
         float dartDistanceFromCenter = Vector3.Distance(dartPos, colliderCenter);
         Debug.Log("Dart distance from center: " + dartDistanceFromCenter);
 
-        if (dartDistanceFromCenter is <= 0.0963f and > 0f) // Inner Bull
+        if (dartDistanceFromCenter is <= 0.0963f and > 0f)
             isBull = true;
-        
-        /*if (dartDistanceFromCenter is < 0.10f and > 0.095f) // Outer Bull
-            isBull = true;
-        if (dartDistanceFromCenter is < 0.0877f and > 0.0807f) // Inner Bull
-            isBull = true;*/
-
-        /*if (dartDistanceFromCenter is 0.10f and > 0.095f) // Outer Bull
-            isBull = true;
-        if (dartDistanceFromCenter is < 0.0877f and > 0f) // Inner Bull
-            isBull = true;*/
         
         return isBull;
     }
 
     private float GetDartAngle(float dartPosY, float dartPosZ)
     {
+        // Use arc tan2 to get the angle of dart on dartboard
         float degrees = Mathf.Atan2(dartPosY - colliderCenter.y, dartPosZ - colliderCenter.z) * 180 / Mathf.PI;
         degrees = (degrees + 360) % 360;
         return degrees;
@@ -174,14 +180,13 @@ public class DartboardScore : MonoBehaviour
 
     private int CheckAngle()
     {
+        // Each slice of the dartboard is sectioned by 18 degrees
         var angleScore = 0;
         
         if (angle is < 360.0f and > 351.0f)
             angleScore = 11;
         if (angle is < 9.0f and > 0.0f)
             angleScore = 11;
-        /*if (angle is < 351.0f and > 9.0f)
-            angleScore = 11;*/
         if (angle is < 27.0f and > 9.0f)
             angleScore = 14;
         if (angle is < 45.0f and > 27.0f)

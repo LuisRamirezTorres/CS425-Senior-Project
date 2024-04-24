@@ -4,9 +4,9 @@ using Leap.Unity;
 
 // Template taken from Ultraleap 
 // https://docs.ultraleap.com/xr-and-tabletop/xr/unity/plugin/features/scripting-fundamentals.html
-public class SpawnTipDart : MonoBehaviour
+public class SpawnTipDartLeftHand : MonoBehaviour
 {
-    [Header("References")]
+    
     [SerializeField]
     private Vector3 dartPos;
     
@@ -31,20 +31,15 @@ public class SpawnTipDart : MonoBehaviour
     [SerializeField]
     private GameObject spawnDart;
     
-    [SerializeField]
-    private LineRenderer dartLine;
-    
-    [SerializeField]
-    private LeapProvider leapProvider;
-    
-    [SerializeField]
-    private GameObject dartPrefab;
-    
     private GameObject dartInstance;
     private Vector3 lastDartPos;
     private bool isInstantiated;
+    private bool dartIsMoving;
+
+    public LineRenderer dartLine;
+    public LeapProvider leapProvider;
+    public GameObject dartPrefab;
     
-    [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip sfx;
     
@@ -54,6 +49,7 @@ public class SpawnTipDart : MonoBehaviour
         dartPos = dartPrefab.transform.position;  // Get current dart pos
         dartOrientation = dartPrefab.transform.rotation; // Get current dart orientation
         lastDartPos = dartPos;
+        dartIsMoving = false;
     }
 
     private void OnEnable()
@@ -68,12 +64,12 @@ public class SpawnTipDart : MonoBehaviour
     void OnUpdateFrame(Frame frame)
     {
         // Use a helpful utility function to get the first hand that matches the Chirality
-        Hand _leftHand = frame.GetHand(Chirality.Left);
+        Hand _rightHand = frame.GetHand(Chirality.Right);
 
         // When we have a valid left hand, we can begin searching for more Hand information
-        if(_leftHand != null)
+        if(_rightHand != null)
         {
-            OnUpdateHand(_leftHand);
+            OnUpdateHand(_rightHand);
         }
     }
 
@@ -146,4 +142,6 @@ public class SpawnTipDart : MonoBehaviour
 
         return isHandOpen;
     }
+    
+    
 }

@@ -6,22 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="66e5a9d4-5a04-4b40-873d-fd108fdca598" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CS425-Senior-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS425-Senior-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arcade/Materials/Carpet.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arcade/Materials/Carpet.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameOver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/DartBoard.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/DartBoard.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/DartboardScore 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/DartboardScore 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/Materials/Dart Texture.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/Materials/Dart Texture.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/Shaders/Shader Graphs_New Shader Graph.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/Shaders/Shader Graphs_New Shader Graph.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/Animations/InstructionsSpawn.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/Animations/InstructionsSpawn.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/Tip Dart Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/Tip Dart Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Ultraleap Tracking/6.13.0/Interaction Examples/Example Assets/Materials/IE Example Prism Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Ultraleap Tracking/6.13.0/Interaction Examples/Example Assets/Materials/IE Example Prism Red.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Ultraleap Tracking/6.13.0/Interaction Examples/Example Assets/Materials/Red Standard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Ultraleap Tracking/6.13.0/Interaction Examples/Example Assets/Materials/Red Standard.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Darts.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Darts.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartCount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartCount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartShowLine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartShowLine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartTrajectory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartTrajectory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartboardScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartboardScore.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GesturesGameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GesturesGameOver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HideCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HideCanvas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResetCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResetCamera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnTipDart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnTipDart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Textures/Brushed Metal 3.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Textures/Brushed Metal 3.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +68,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../Unity Builds/Darts Test Build\VRcade Suite.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Unity Builds/Darts Test Build 3 Right Hand\VRcade Suite.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\dev\Unity Builds\Darts Test Build" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -167,6 +163,8 @@
       <workItem from="1713570133567" duration="3849000" />
       <workItem from="1713574588896" duration="3419000" />
       <workItem from="1713637280280" duration="7447000" />
+      <workItem from="1713737322371" duration="4145000" />
+      <workItem from="1713988362597" duration="2291000" />
     </task>
     <servers />
   </component>
