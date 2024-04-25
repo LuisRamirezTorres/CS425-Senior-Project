@@ -77,10 +77,9 @@ public class DetectHoopsScore : MonoBehaviour
         throwing_confetti = true;
         confetti.SetActive(true);
     }
-    void restart()
+    public void restart()
     {
-        if (time_remaining <= 0)
-        {
+
             Debug.Log("restarting...");
             time_remaining = 60.0f;
             score = 0;
@@ -88,7 +87,5 @@ public class DetectHoopsScore : MonoBehaviour
             gameOverScreen.SetActive(false);
             gameloopController.enabled = false;
 
-
-        }
     }
 }
