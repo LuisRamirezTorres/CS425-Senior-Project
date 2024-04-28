@@ -8,11 +8,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int currentScore;
-    public int ballCount;
+    private int currentScore;
+    private int ballCount;
     public Camera cam;
     public GameObject floatText;
-    public int tempScore;
+    public AudioSource src;
+    public AudioClip ding, ding_100;
+    private int tempScore;
 
     private Vector3 cameraVec = new Vector3(-0.4f, 1f, 6f);
 
@@ -45,6 +47,16 @@ public class GameManager : MonoBehaviour
 
         this.currentScore += score;
         this.tempScore = score;
+        if(score == 100)
+        {
+            src.clip = ding_100;
+            src.Play();
+        }
+        else
+        {
+            src.clip = ding;
+            src.Play();
+        }
         
         var text = Instantiate(floatText, this.transform.position, Quaternion.Euler(0f, 90f, 0));
         text.GetComponent<TMP_Text>().text = tempScore.ToString();
