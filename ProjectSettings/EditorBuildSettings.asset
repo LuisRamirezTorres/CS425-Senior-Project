@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Skeeball.unity
     guid: ec34cbd0a66a49b41902656148c01d32
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/DartsLeftHand.unity
     guid: 0df5b0f9bcf8e9644b0b20bc754adc00
   m_configObjects: {}
