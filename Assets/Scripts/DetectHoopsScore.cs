@@ -6,8 +6,9 @@ using UnityEngine;
 
 public class DetectHoopsScore : MonoBehaviour
 {
+    private const float GAME_TIMER = 90.0f;
     private int score = 0;
-    private float time_remaining = 60.0f;
+    private float time_remaining = GAME_TIMER;
     private float disable_time = 0.25f;
     private bool collider_disabled = false;
     public TextMeshProUGUI score_text;
@@ -81,7 +82,7 @@ public class DetectHoopsScore : MonoBehaviour
     {
 
             Debug.Log("restarting...");
-            time_remaining = 60.0f;
+            time_remaining = GAME_TIMER;
             score = 0;
             game_started = true;
             gameOverScreen.SetActive(false);
