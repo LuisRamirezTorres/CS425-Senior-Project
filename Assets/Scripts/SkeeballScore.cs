@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class SkeeballScore : MonoBehaviour
 {
-
-    
+ 
     private GameManager instance;
     public TextMeshProUGUI playerScore;
     public TextMeshProUGUI ballsLeft;
     public GameOverScreen gameOver;
+   // public GameObject floatText;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,7 @@ public class SkeeballScore : MonoBehaviour
             GameOverScreen();
             if (Input.GetKeyDown(KeyCode.R))
             {
-                instance.newGame();
+                SceneManager.LoadScene("Skeeball");
             }
 
         }
@@ -48,12 +49,12 @@ public class SkeeballScore : MonoBehaviour
         gameOver.SetUp();
     }
 
-
+ 
     private void OnTriggerEnter(Collider collision)
     {
 
         if(collision.gameObject.name == "Collider10")
-        {
+        {          
             Destroy(this.gameObject);
             instance.addScore(10);
            

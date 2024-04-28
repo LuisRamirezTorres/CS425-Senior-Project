@@ -9,6 +9,7 @@ public class FollowBall : MonoBehaviour
     public Transform target;
     public Vector3 offset;
     private GameManager instance;
+    public float smoothSpeed = 0.125f;
 
 
     void Start()
@@ -20,11 +21,15 @@ public class FollowBall : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         target = GameObject.FindGameObjectWithTag("Skeeball").transform;
-        transform.position = target.position + offset;
+        Vector3 desiredPos = target.position + offset;
+        Vector3 smoothPos = Vector3.Lerp(transform.position, desiredPos, smoothSpeed);
+        transform.position = smoothPos;
+
+        transform.LookAt(target);
         
     }
 }

@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8322522202045277647}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.327, y: -1.8485653, z: 6.89}
   m_LocalScale: {x: 0.07609228, y: 0.07609228, z: 0.07609228}
   m_ConstrainProportionsScale: 0
@@ -238,6 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac3484078f5caa4b9a06d2be228bafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScore: {fileID: 0}
-  ballsLeft: {fileID: 0}
+  playerScore: {fileID: 8466405617142942089, guid: 57934467852384c4e8e8cfa918fdbe10, type: 3}
+  ballsLeft: {fileID: 231388474596923953, guid: f47d17c45872aa6448dc240e33e54d9a, type: 3}
   gameOver: {fileID: 0}
