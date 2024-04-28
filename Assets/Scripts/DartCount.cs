@@ -32,6 +32,12 @@ public class DartCount : MonoBehaviour
         return currentDarts;
     }
 
+    public void ResetDartCount()
+    {
+        currentDarts = 8;
+        dartText.text = currentDarts.ToString() + dartStr;
+    }
+
     public void DecreaseDarts()
     {
         currentDarts--;

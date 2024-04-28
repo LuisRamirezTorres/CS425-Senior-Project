@@ -7,17 +7,18 @@
     <list default="true" id="66e5a9d4-5a04-4b40-873d-fd108fdca598" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CS425-Senior-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS425-Senior-Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/Animations/InstructionsSpawn.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/Animations/InstructionsSpawn.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/Tip Dart Left Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/Tip Dart Left Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/Tip Dart Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/Tip Dart Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Darts.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Darts.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DartsLeftHand.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DartsLeftHand.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdjustGrab.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AdjustGrab.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartCount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartCount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartShowLine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartShowLine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartTrajectory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartTrajectory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartPinchStrength.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartPinchStrength.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartboardScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartboardScore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GesturesGameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GesturesGameOver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HideCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HideCanvas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResetCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResetCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FloatingScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FloatingScore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnTipDart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnTipDart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RecordReplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnTipDart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestSpawnTipDart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.ultraleap.tracking@6.13.0/Interaction Engine/Runtime/Plugins/GrabClassifierHeuristics.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.ultraleap.tracking@6.13.0/Interaction Engine/Runtime/Scripts/Internal/HeuristicGrabClassifier.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMP_FontAsset_CreationMenu.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -165,6 +168,9 @@
       <workItem from="1713637280280" duration="7447000" />
       <workItem from="1713737322371" duration="4145000" />
       <workItem from="1713988362597" duration="2291000" />
+      <workItem from="1714154794867" duration="3904000" />
+      <workItem from="1714243517662" duration="1620000" />
+      <workItem from="1714328935804" duration="9487000" />
     </task>
     <servers />
   </component>

@@ -71,6 +71,11 @@ public class DartboardScore : MonoBehaviour
         return currentScore;
     }
 
+    public void ResetScore()
+    {
+        currentScore = 0;
+    }
+
     private void OnTriggerEnter(Collider collider)
     {
         Debug.Log("Collision detected: " + collider);

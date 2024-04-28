@@ -6034,34 +6034,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &64165477 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4128816035574569016, guid: ab23e2f2932c8c84ab6a7f20b33c10fa, type: 3}
-  m_PrefabInstance: {fileID: 231206786}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &64165489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64165477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54af656ba520e164c972ed85742581f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &64165490 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -5989720944463967027, guid: ab23e2f2932c8c84ab6a7f20b33c10fa, type: 3}
-  m_PrefabInstance: {fileID: 231206786}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64165477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54af656ba520e164c972ed85742581f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &77374488
 GameObject:
   m_ObjectHideFlags: 0
@@ -13505,7 +13477,7 @@ PrefabInstance:
     - target: {fileID: 654119864985649277, guid: ab23e2f2932c8c84ab6a7f20b33c10fa, type: 3}
       propertyPath: _eventTable._entries.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 64165490}
+      objectReference: {fileID: 0}
     - target: {fileID: 654119864985649277, guid: ab23e2f2932c8c84ab6a7f20b33c10fa, type: 3}
       propertyPath: _eventTable._entries.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -13589,10 +13561,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4128816035574569016, guid: ab23e2f2932c8c84ab6a7f20b33c10fa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 64165489}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab23e2f2932c8c84ab6a7f20b33c10fa, type: 3}
 --- !u!1 &239538217
 GameObject:
@@ -46252,6 +46221,10 @@ PrefabInstance:
       propertyPath: dartCount
       value: 
       objectReference: {fileID: 111392138}
+    - target: {fileID: 6744244444889662498, guid: 90c73e4c3aecb4e408cbbe4e6da8b1bd, type: 3}
+      propertyPath: dartboardScore
+      value: 
+      objectReference: {fileID: 526866240}
     - target: {fileID: 8748800782952631643, guid: 90c73e4c3aecb4e408cbbe4e6da8b1bd, type: 3}
       propertyPath: m_Pivot.x
       value: 0

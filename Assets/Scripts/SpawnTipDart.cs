@@ -1,6 +1,7 @@
 using UnityEngine;
 using Leap;
 using Leap.Unity;
+using Leap.Unity.Interaction;
 
 // Template taken from Ultraleap 
 // https://docs.ultraleap.com/xr-and-tabletop/xr/unity/plugin/features/scripting-fundamentals.html
@@ -36,6 +37,9 @@ public class SpawnTipDart : MonoBehaviour
     
     [SerializeField]
     private LeapProvider leapProvider;
+    
+    /*[SerializeField]
+    private InteractionController interactionController;*/
     
     [SerializeField]
     private GameObject dartPrefab;
@@ -107,6 +111,10 @@ public class SpawnTipDart : MonoBehaviour
         
         dartInstance = Instantiate(dartPrefab, dartPos, dartOrientation);
         
+        /*var intController = dartInstance.AddComponent<DartPinchStrength>();
+        intController.leapProvider = leapProvider;
+        intController.interactionController = interactionController;*/
+        
         // Get dart's DartTrajectoryLine component information and pass dartLine
         var dtl = dartInstance.GetComponent<DartTrajectoryLine>();
         dtl.lineRenderer = dartLine;
@@ -118,6 +126,7 @@ public class SpawnTipDart : MonoBehaviour
         // Get dart's DartAcceleration component information and pass audioSource
         var sound = dartInstance.GetComponent<DartAcceleration>();
         sound.audioSource = audioSource;
+        
         
         Debug.Log("Instantiating new Tip Dart");
         
