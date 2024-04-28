@@ -28,6 +28,6 @@ public class GameOverScreen : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("Skeeball");
+        instance.newGame();
     }
 }

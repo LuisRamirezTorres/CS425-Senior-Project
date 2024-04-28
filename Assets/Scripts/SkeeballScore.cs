@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class SkeeballScore : MonoBehaviour
@@ -34,7 +35,7 @@ public class SkeeballScore : MonoBehaviour
             GameOverScreen();
             if (Input.GetKeyDown(KeyCode.R))
             {
-                instance.newGame();
+                SceneManager.LoadScene("Skeeball");
             }
 
         }

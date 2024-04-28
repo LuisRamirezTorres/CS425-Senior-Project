@@ -3658,6 +3658,38 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 108.24
       objectReference: {fileID: 0}
+    - target: {fileID: 1230360812915169199, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230360812915169199, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0738
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230360812915169199, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0328
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230360812915169199, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.51503813
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230360812915169199, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230360812915169199, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8571673
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230360812915169199, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230360812915169199, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 118
+      objectReference: {fileID: 0}
     - target: {fileID: 3474916237208331212, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
       propertyPath: m_Name
       value: NewSkee-Ball Home Arcade Premium
@@ -3741,7 +3773,7 @@ PrefabInstance:
       addedObject: {fileID: 1987476624}
     - targetCorrespondingSourceObject: {fileID: 4283681104381770102, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1772191023}
+      addedObject: {fileID: 490113846}
     - targetCorrespondingSourceObject: {fileID: 8453809539443028101, guid: 4fef40a47f09b204eaef3dcc67ef1337, type: 3}
       insertIndex: 2
       addedObject: {fileID: 1221414943}
@@ -4063,8 +4095,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'How To Play:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f0bbb390ddc7dc84d85968a2532a7dcb, type: 2}
+  m_sharedMaterial: {fileID: 4092782011409171919, guid: f0bbb390ddc7dc84d85968a2532a7dcb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5541,6 +5573,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488291909}
   m_CullTransparentMesh: 1
+--- !u!1 &490113845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 490113846}
+  - component: {fileID: 490113847}
+  m_Layer: 0
+  m_Name: SafetyCollider (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &490113846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490113845}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -19.54, y: 112.24, z: -131}
+  m_LocalScale: {x: 5.8517475, y: 5.8517504, z: 5.8517475}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 314377285}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &490113847
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490113845}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6517033, y: 3.517995, z: 1.9625365}
+  m_Center: {x: -0.6555961, y: 1.3842247, z: -0.66714597}
 --- !u!1 &490256205 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8274873701517981592, guid: e5d00e6f2a9dc4a43bd63b16637cf26e, type: 3}
@@ -9342,8 +9427,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f0bbb390ddc7dc84d85968a2532a7dcb, type: 2}
+  m_sharedMaterial: {fileID: 4092782011409171919, guid: f0bbb390ddc7dc84d85968a2532a7dcb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10509,14 +10594,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4cca5ed4a3997746847d48ec494613d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScore: 0
-  ballCount: 0
   cam: {fileID: 1367887194}
   floatText: {fileID: 927700852}
   src: {fileID: 892241344}
   ding: {fileID: 8300000, guid: 2ca840b102606084eb23fd4b8a21292d, type: 3}
   ding_100: {fileID: 8300000, guid: c43029126d6e06f4fb5d5e93e3c17694, type: 3}
-  tempScore: 0
 --- !u!114 &985273544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17988,8 +18070,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f0bbb390ddc7dc84d85968a2532a7dcb, type: 2}
+  m_sharedMaterial: {fileID: 4092782011409171919, guid: f0bbb390ddc7dc84d85968a2532a7dcb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18263,8 +18345,8 @@ MonoBehaviour:
   m_text: 1) Start with an open hand and hover over it over the controller until
     visible
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f0bbb390ddc7dc84d85968a2532a7dcb, type: 2}
+  m_sharedMaterial: {fileID: 4092782011409171919, guid: f0bbb390ddc7dc84d85968a2532a7dcb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21637,59 +21719,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1290458748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1772191022
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1772191023}
-  - component: {fileID: 1772191024}
-  m_Layer: 0
-  m_Name: SafetyCollider (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1772191023
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772191022}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -21.75, y: 114.133255, z: -127.77}
-  m_LocalScale: {x: 5.8517475, y: 5.8517504, z: 5.8517475}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 314377285}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1772191024
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772191022}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2577349, y: 2.8463817, z: 2.0193372}
-  m_Center: {x: -0.45861173, y: 1.0484176, z: 0.0014122259}
 --- !u!1 &1782686728
 GameObject:
   m_ObjectHideFlags: 0
@@ -22059,8 +22088,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Welcome To VRCade Suite: Skeeball'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d5b91d6302d4984a91de3a68e0668b5, type: 2}
+  m_sharedMaterial: {fileID: -3659722185923783894, guid: 4d5b91d6302d4984a91de3a68e0668b5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24216,8 +24245,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2577349, y: 2.8463817, z: 2.0193372}
-  m_Center: {x: -0.45861173, y: 1.0484176, z: 0.0014122259}
+  m_Size: {x: 0.6517033, y: 3.517995, z: 1.9667593}
+  m_Center: {x: -0.6555961, y: 1.3842247, z: 0.027701141}
 --- !u!4 &1987476624
 Transform:
   m_ObjectHideFlags: 0
@@ -24227,7 +24256,7 @@ Transform:
   m_GameObject: {fileID: 1987476622}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 23.235462, y: 114.133255, z: -127.77127}
+  m_LocalPosition: {x: 23.24, y: 112.24, z: -131.04}
   m_LocalScale: {x: 5.8517475, y: 5.8517504, z: 5.8517475}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25415,7 +25444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5688389649932157946, guid: 15abf050164253e448bf835ccf2c0db3, type: 3}
       propertyPath: m_Volume
-      value: 0.902
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26910,11 +26939,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5908089732491668682, guid: d9d09c32a19b1c345873c09ff96d81ba, type: 3}
       propertyPath: m_text
-      value: GO!
+      value: 'Good
+
+        Luck!'
       objectReference: {fileID: 0}
     - target: {fileID: 5908089732491668682, guid: d9d09c32a19b1c345873c09ff96d81ba, type: 3}
       propertyPath: m_margin.z
-      value: 14.234289
+      value: 12.222994
       objectReference: {fileID: 0}
     - target: {fileID: 5908089732491668682, guid: d9d09c32a19b1c345873c09ff96d81ba, type: 3}
       propertyPath: m_fontColor.b
