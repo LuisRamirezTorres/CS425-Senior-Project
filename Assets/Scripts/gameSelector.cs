@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class gameSelector : MonoBehaviour
 {
     
-    public GameObject selectionPanel;
+  
     public static int gameCountReference;
 
     private AudioManager audioManager; 
@@ -15,7 +15,7 @@ public class gameSelector : MonoBehaviour
     void Start()
     {
         
-        selectionPanel.SetActive(true);
+        
         gameCountReference = 0;
 
         // Find AudioManager instance in the scene

@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DartsLeftHand.unity
     guid: 0df5b0f9bcf8e9644b0b20bc754adc00
+  - enabled: 1
+    path: Assets/Scenes/GameSelection.unity
+    guid: 020eab702b987234e9e54dcee01b5c18
   m_configObjects: {}
