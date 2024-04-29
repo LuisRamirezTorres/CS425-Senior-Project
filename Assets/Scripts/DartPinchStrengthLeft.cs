@@ -5,7 +5,7 @@ using Leap;
 using Leap.Unity;
 using Leap.Unity.Interaction;
 
-public class DartPinchStrength : MonoBehaviour
+public class DartPinchStrengthLeft : MonoBehaviour
 {
     public LeapProvider leapProvider;
     
@@ -24,12 +24,12 @@ public class DartPinchStrength : MonoBehaviour
     void OnUpdateFrame(Frame frame)
     {
         //Use a helpful utility function to get the first hand that matches the Chirality
-        Hand _rightHand = frame.GetHand(Chirality.Right);
+        Hand _leftHand = frame.GetHand(Chirality.Left);
 
         //When we have a valid left hand, we can begin searching for more Hand information
-        if(_rightHand != null)
+        if(_leftHand != null)
         {
-            OnUpdateHand(_rightHand);
+            OnUpdateHand(_leftHand);
         }
     }
 
