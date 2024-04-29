@@ -83,7 +83,7 @@ public class MainMenu : MonoBehaviour {
 
 
 
-        if (IsExtended(_hand) && !extendCheck && side == "right")
+        if (IsExtended(_hand) && !extendCheck && side == "right" && canExecute)
         {
             Debug.Log("All fingers are extended");
             enterSelection();
@@ -91,7 +91,7 @@ public class MainMenu : MonoBehaviour {
         }
 
 
-        if (IsThumbsUp(_hand) && !extendCheck && side == "left")
+        if (IsThumbsUp(_hand) && !extendCheck && side == "left" && canExecute)
         {
             Debug.Log("Thumb is up");
             enterSettings();
