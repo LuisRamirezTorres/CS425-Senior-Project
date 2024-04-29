@@ -25,6 +25,7 @@ public class gameSelector : MonoBehaviour
     // Start is called before the first frame update
 
     private bool extendCheck;
+    private bool canExecute;
 
     void Start()
     {
@@ -49,6 +50,8 @@ public class gameSelector : MonoBehaviour
         yield return new WaitForSeconds(2); // Wait for 2 seconds
 
         Debug.Log("Coroutine resumed after waiting for 2 seconds");
+
+        canExecute = true; 
     }
 
 
@@ -89,11 +92,23 @@ public class gameSelector : MonoBehaviour
 
 
 
-        if (IsExtended(_hand) && !extendCheck && side == "left")
+        if (IsExtended(_hand) && !extendCheck && side == "left" && canExecute)
         {
-            Debug.Log("All fingers are extended");
-            goToMenu();
+            Debug.Log("All fingers are extended right side");
+            nextGame();
+            // goToMenu();
             extendCheck = true;
+            canExecute = false;
+            StartCoroutine(MyCoroutine());
+        }
+
+        if (IsExtended(_hand) && !extendCheck && side == "right" && canExecute)
+        {
+            Debug.Log("All fingers are extended left side");
+            previousGame();
+            extendCheck = true;
+            canExecute = false;
+            StartCoroutine(MyCoroutine());
         }
 
 
@@ -104,7 +119,7 @@ public class gameSelector : MonoBehaviour
             extendCheck = true;
         }
 
-        if (isPointingLeft(_hand) && !extendCheck)
+       /* if (isPointingLeft(_hand) && !extendCheck)
         {
             Debug.Log("Finger is pointing left");
             previousGame();
@@ -119,7 +134,7 @@ public class gameSelector : MonoBehaviour
             nextGame();
             extendCheck = true;
             StartCoroutine(MyCoroutine());
-        }
+        }*/
 
 
 
@@ -240,6 +255,34 @@ public class gameSelector : MonoBehaviour
 
     }
 
+    bool twoFingers(Hand _hand)
+    {
+        bool two_Fingers;
+        Finger _thumb = _hand.GetThumb();
+        Finger _index = _hand.GetIndex();
+        Finger _middle = _hand.GetMiddle();
+        Finger _ring = _hand.GetRing();
+        Finger _pinky = _hand.GetPinky();
+
+        bool isThumb = _thumb.IsExtended;
+        bool isIndex = _index.IsExtended;
+        bool isMiddle = _middle.IsExtended;
+        bool isRing = _ring.IsExtended;
+        bool isPinky = _pinky.IsExtended;
+
+        if (isThumb && isIndex && !isMiddle && !isRing && !isPinky)
+        {
+            two_Fingers = true;
+            Debug.Log("2 Fingers Extended");
+        }
+
+        else
+        {
+            two_Fingers = false;
+        }
+        return two_Fingers;
+    }
+
 
     bool IsThumbsUp(Hand _hand)
     {
@@ -260,7 +303,7 @@ public class gameSelector : MonoBehaviour
         bool isPinky = _pinky.IsExtended;
         
 
-        if (isThumb && !isIndex)
+        if (isThumb && !isIndex && !isMiddle && !isRing && isPinky)
             isThumbsUp = true;
         else
             isThumbsUp = false;
@@ -279,18 +322,22 @@ public class gameSelector : MonoBehaviour
             skeeBallPanel.SetActive(true);
             basketBallPanel.SetActive(false);
             gameCountReference++;
+            Debug.Log("GameCountReference" + gameCountReference);
         }
         else if (gameCountReference == 1)
         {
 
             dartsPanel.SetActive(true);
             skeeBallPanel.SetActive(false);
+            Debug.Log("GameCountReference" + gameCountReference);
+            gameCountReference++;
         }
         else if (gameCountReference == 2)
         {
             basketBallPanel.SetActive(true);
             dartsPanel.SetActive(false);
             gameCountReference = 0;
+            Debug.Log("GameCountReference" + gameCountReference);
         }
     }
 
@@ -301,18 +348,21 @@ public class gameSelector : MonoBehaviour
             basketBallPanel.SetActive(false);
             dartsPanel.SetActive(true);
             gameCountReference = 2;
+            Debug.Log("GameCountReference" + gameCountReference);
         }
         else if (gameCountReference == 1)
         {
             skeeBallPanel.SetActive(false);
             basketBallPanel.SetActive(true);
             gameCountReference--;
+            Debug.Log("GameCountReference" + gameCountReference);
         }
         else if (gameCountReference == 2)
         {
             dartsPanel.SetActive(false);
             skeeBallPanel.SetActive(true);
             gameCountReference--;
+            Debug.Log("GameCountReference" + gameCountReference);
         }
        
     }
@@ -358,14 +408,17 @@ public class gameSelector : MonoBehaviour
         if (gameCountReference == 0)
         {
             SceneManager.LoadScene("Basketball");
+            Debug.Log("GameCountReference" + gameCountReference);
         }
         else if (gameCountReference == 1)
         {
             SceneManager.LoadScene("Skeeball");
+            Debug.Log("GameCountReference" + gameCountReference);
         }
         else if (gameCountReference == 2)
         {
             SceneManager.LoadScene("Darts");
+            Debug.Log("GameCountReference" + gameCountReference);
         }
     }
 

@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour {
 
     public LeapProvider leapProvider;
 
+    private bool canExecute;
+
     // Start is called before the first frame update
 
     private bool extendCheck;
@@ -23,17 +25,19 @@ public class MainMenu : MonoBehaviour {
 
     void Start()
     {
+        canExecute = false;
         StartCoroutine(StartAfterDelay());
     }
 
     IEnumerator StartAfterDelay()
     {
-        yield return delay; // Wait for 5 seconds
+        Debug.Log("Coroutine started");
 
-        // Now the script execution starts
-        isPaused = false;
+        yield return new WaitForSeconds(5); // Wait for 5 seconds
 
-        // Your script logic here
+        Debug.Log("Coroutine resumed after waiting for 5 seconds");
+
+        canExecute = true;
     }
 
 
@@ -147,7 +151,7 @@ public class MainMenu : MonoBehaviour {
         bool isRing = _ring.IsExtended;
         bool isPinky = _pinky.IsExtended;
 
-        if (isThumb)
+        if (isThumb && !isIndex)
             isThumbsUp = true;
         else
             isThumbsUp = false;
