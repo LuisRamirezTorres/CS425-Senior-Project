@@ -70,8 +70,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4643373916963244564, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4643373916963244564, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -6387625228405719229, guid: daf6aa48fb41df64f8fa49921367b45c, type: 3}
+    - target: {fileID: 4643373916963244564, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2321595615710281431, guid: d44fe9a1ffc930b4fb6bd9f482daf16b, type: 3}
+    - target: {fileID: 4643373916963244564, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 15e3326655643184ebdabfa28097159b, type: 2}
     - target: {fileID: 4643373916963244564, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
@@ -86,6 +98,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1352561615280479851}
+    - targetCorrespondingSourceObject: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8497369290604025373}
     - targetCorrespondingSourceObject: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6779236179650422288}
@@ -160,6 +175,18 @@ CapsuleCollider:
   m_Height: 0.7773542
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.16}
+--- !u!114 &-8497369290604025373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495455744778267216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54af656ba520e164c972ed85742581f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6779236179650422288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +204,9 @@ MonoBehaviour:
   x_added_speed: 3.5
   y_added_speed: 2
   turn: 2
+  audioSource: {fileID: 8525650512320856352, guid: 918a2836c2ad7194e836ca4947572466, type: 3}
+  sfx: {fileID: 8300000, guid: 217a78e46dbb04f43b32c24e4da1463f, type: 3}
+  spawnDart: {fileID: 5267130590091222858, guid: 1874e7de911f297469ad12e492a21d18, type: 3}
 --- !u!114 &606651303766550789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 8505456127051198413, guid: f5284992187845a4991d6c343b17151c, type: 3}
-  arc: -0.01
+  arc: 0
   lineSegments: 60
   timeOfFlight: 5
 --- !u!114 &6189507147752307685

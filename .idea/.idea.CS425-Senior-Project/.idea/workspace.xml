@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66e5a9d4-5a04-4b40-873d-fd108fdca598" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CS425-Senior-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS425-Senior-Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/Animations/InstructionsSpawn.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/Animations/InstructionsSpawn.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/Tip Dart Left Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/Tip Dart Left Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/DartBoard/Tip Dart Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/DartBoard/Tip Dart Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Darts.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Darts.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Basketball.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Basketball.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DartsLeftHand.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DartsLeftHand.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdjustGrab.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AdjustGrab.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartCount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartCount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartPinchStrength.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartPinchStrength.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DartboardScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DartboardScore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FloatingScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FloatingScore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnTipDart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnTipDart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +30,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ProjectileStick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RecordReplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnTipDart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestSpawnTipDart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.ultraleap.tracking@6.13.0/Interaction Engine/Runtime/Plugins/GrabClassifierHeuristics.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.ultraleap.tracking@6.13.0/Interaction Engine/Runtime/Scripts/Internal/HeuristicGrabClassifier.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMP_FontAsset_CreationMenu.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -33,35 +48,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-    &quot;git-widget-placeholder&quot;: &quot;Release__1.0&quot;,
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Darts&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Release__1.0",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\zaira\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\zaira\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\zaira\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\zaira\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\zaira\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\zaira\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Unity Builds/Darts Test Build 3 Right Hand\VRcade Suite.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\dev\Unity Builds\Darts Test Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.11f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\dev\CS425-Senior-Project -debugCodeOptimization" />
@@ -139,6 +155,22 @@
       <workItem from="1710196594564" duration="5700000" />
       <workItem from="1710212828702" duration="31000" />
       <workItem from="1709860456375" duration="596000" />
+      <workItem from="1712946014758" duration="6429000" />
+      <workItem from="1713033856160" duration="5277000" />
+      <workItem from="1713048175240" duration="2959000" />
+      <workItem from="1713122596499" duration="3734000" />
+      <workItem from="1713299103577" duration="5370000" />
+      <workItem from="1713324292907" duration="917000" />
+      <workItem from="1713376179765" duration="2511000" />
+      <workItem from="1713378916031" duration="5202000" />
+      <workItem from="1713570133567" duration="3849000" />
+      <workItem from="1713574588896" duration="3419000" />
+      <workItem from="1713637280280" duration="7447000" />
+      <workItem from="1713737322371" duration="4145000" />
+      <workItem from="1713988362597" duration="2291000" />
+      <workItem from="1714154794867" duration="3904000" />
+      <workItem from="1714243517662" duration="1620000" />
+      <workItem from="1714328935804" duration="9487000" />
     </task>
     <servers />
   </component>

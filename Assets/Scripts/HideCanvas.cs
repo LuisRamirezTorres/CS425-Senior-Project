@@ -13,12 +13,6 @@ public class HideCanvas : MonoBehaviour
         StartCoroutine(DisableCanvas(canvasObject, destroyTime));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     IEnumerator DisableCanvas(GameObject canvasObj, float t)
     {
         yield return new WaitForSeconds(t);

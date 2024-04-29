@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class DartTrajectory : MonoBehaviour
 {
-    [SerializeField] private LineRenderer lineRenderer;
-    [SerializeField] private Transform releasePosition;
+    [SerializeField] 
+    private LineRenderer lineRenderer;
+    [SerializeField] 
+    private Transform releasePosition;
 
-    [SerializeField] private Rigidbody dartRB;
+    [SerializeField] 
+    private Rigidbody dartRB;
 
-    [SerializeField] private Camera camera;
+    [SerializeField] 
+    private Camera camera;
     
     [SerializeField] [field: Range(1, 100)]
     private float throwStrength = 10f;

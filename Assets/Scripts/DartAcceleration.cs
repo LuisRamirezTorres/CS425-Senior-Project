@@ -14,31 +14,28 @@ public class DartAcceleration : MonoBehaviour
     [SerializeField] 
     private float turn = 2.0f;
 
-    /*[SerializeField] 
-    private InteractionBehaviour interactionBehaviour;*/
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AudioSource audioSource;
+    public AudioClip sfx;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject spawnDart;
+    
     void PrintVelocity()
     {
         Debug.Log("Dart Velocity: " + dartRB.velocity);
     }
     void Accelerate()
     {
+        audioSource.clip = sfx;
+        audioSource.Play();
+        
         Vector3 addedVel = new Vector3(x_added_speed, y_added_speed, 0);
+        dartRB.velocity += addedVel;
 //        interactionBehaviour.AddLinearAcceleration(addedVel);
-        dartRB.AddForce(dartBoardRB.transform.forward);
-        dartRB.velocity = dartRB.velocity + addedVel;
-        dartRB.AddTorque(transform.forward * 1 * turn);
+//        dartRB.AddForce(dartBoardRB.transform.forward);
+//        dartRB.velocity = dartRB.velocity + addedVel;
+//        dartRB.AddTorque(transform.forward * 1 * turn);
         PrintVelocity();
+        
+        spawnDart.SetActive(true);
     }
 }

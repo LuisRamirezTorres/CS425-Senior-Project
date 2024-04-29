@@ -742,7 +742,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -762,11 +768,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 1bd15462-e354-4901-bd8f-0f2bb3c1aba6
+  cloudProjectId: c4aca14f-7669-4ef0-867d-a09ac738a472
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: VRcade Suite 2023-11-27_20-36-24
-  organizationId: chito7
+  projectName: VRcade Suite
+  organizationId: austinhendricks_unity
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

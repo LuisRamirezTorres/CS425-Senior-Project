@@ -8,7 +8,6 @@ using UnityEngine;
 public class GesturesGameOver : MonoBehaviour
 {
     public LeapProvider leapProvider;
-//    private static GesturesGameOver instance;
     
     [SerializeField]
     private GameOver gameOver;
@@ -64,7 +63,7 @@ public class GesturesGameOver : MonoBehaviour
         
         Finger _thumb = _hand.GetThumb();
         bool isThumb = _thumb.IsExtended;
-
+        
         if (isThumb)
             isThumbsUp = true;
         else

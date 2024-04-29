@@ -3,30 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Leap;
 using Leap.Unity;
+using Leap.Unity.Interaction;
 
-// If pinch strength < x, GraspEnd()
 public class DartPinchStrength : MonoBehaviour
 {
     public LeapProvider leapProvider;
-
-    public Vector3 dartPos;
-
-    public GameObject dart;
-
-    private Rigidbody rb;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        dartPos = dart.transform.position;
-        rb = GetComponent<Rigidbody>();
-    }
+    public InteractionController interactionController;
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+    private bool isPinching;
+
     private void OnEnable()
     {
         leapProvider.OnUpdateFrame += OnUpdateFrame;
@@ -49,21 +35,17 @@ public class DartPinchStrength : MonoBehaviour
 
     void OnUpdateHand(Hand _hand)
     {
-        Finger _index = _hand.GetIndex();
-        Finger _thumb = _hand.GetThumb();
-        
-        float _pinchStrength = _hand.PinchStrength;
-        Debug.Log("Pinch Strength:" + _pinchStrength);
+        float pinchStrength = _hand.PinchStrength;
+        Debug.Log("Pinch Strength:" + pinchStrength);
 
-        if (_pinchStrength > .50)
+        if (pinchStrength > 0.5 && !isPinching)
         {
-            rb.isKinematic = true;
-            dart.transform.position = _thumb.TipPosition;
+            isPinching = true;
         }
-        else
+        else if (pinchStrength < 0.4 && isPinching)
         {
-            rb.isKinematic = false;
-            rb.AddForce(transform.forward * 10f);
+            isPinching = false;
+            interactionController.ReleaseGrasp();
         }
         
     }

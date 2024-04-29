@@ -47,10 +47,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatingScorePrefab: {fileID: 4055409110594382312, guid: e82a5e1dc34398148a3b85d3bc9a5e0a, type: 3}
-  dartTip: {fileID: 5495455744778267216, guid: c36e9ed7aab72104eade1276d172f076, type: 3}
+  resetCamera: {fileID: 4371490798600478219, guid: fc2f074a2420e7947a2335b4dea09cb5, type: 3}
   scoreText: {fileID: 8460892091508735979, guid: 5eeeac133ea85a94eb7c47cc7022d1a4, type: 3}
   scoreStr: 'Score: '
-  meshCollider: {fileID: 1982031889783968068, guid: a23203f243d5f074693b0e3fe73b6388, type: 3}
+  meshCollider: {fileID: 2683890168967930043, guid: 509477e5bbeaafe4c8d03361505f870e, type: 3}
+  mainCamera: {fileID: 0}
+  cameraPos: {x: 0, y: 0, z: 0}
+  audioSource: {fileID: 0}
+  sfx: {fileID: 0}
 --- !u!64 &7541655779417064291
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68,7 +72,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
