@@ -8,6 +8,7 @@ public class ThrowingTest : MonoBehaviour
     public Transform cam;
     public Transform attackPoint;
     public GameObject objectToThrow;
+    public Rigidbody dart;
 
     [Header("Settings")] 
     public int totalThrows;
@@ -29,10 +30,12 @@ public class ThrowingTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
+        if (Input.GetKeyDown(throwKey))
+            dart.velocity = transform.right * 2 + transform.forward * .18f + transform.up * 0.31f;
+        /*if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
         {
             Throw();
-        }
+        }*/
     }
 
     void Throw()

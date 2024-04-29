@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66e5a9d4-5a04-4b40-873d-fd108fdca598" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Darts.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Darts.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Basketball.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Basketball.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +33,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+    &quot;git-widget-placeholder&quot;: &quot;Release__1.0&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -126,6 +134,10 @@
       <workItem from="1709499545791" duration="296000" />
       <workItem from="1709521461234" duration="1010000" />
       <workItem from="1709607433181" duration="4119000" />
+      <workItem from="1709860456375" duration="596000" />
+      <workItem from="1710181721880" duration="4792000" />
+      <workItem from="1710196594564" duration="5700000" />
+      <workItem from="1710212828702" duration="31000" />
       <workItem from="1709860456375" duration="596000" />
     </task>
     <servers />
