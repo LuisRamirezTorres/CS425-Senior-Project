@@ -7,24 +7,17 @@ using Leap.Unity;
 using static Leap.Unity.Detector;
 using UnityEngine.SceneManagement;
 
-public class WelcomeScreen1 : MonoBehaviour
-{
 
+public class dartsParity : MonoBehaviour
+{
 
     public LeapProvider leapProvider;
 
-
-    public void ChangeWelcome()
-    {
-        SceneManager.LoadScene(1);
-    }
-
+    // Start is called before the first frame update
 
     private bool extendCheck;
 
-    void Start()
-    {
-    }
+
 
     private void OnEnable()
     {
@@ -44,20 +37,34 @@ public class WelcomeScreen1 : MonoBehaviour
         // When we have a valid left hand, we can begin searching for more Hand information
         if (_leftHand != null /*|| _rightHand != null*/)
         {
-            OnUpdateHand(_leftHand);
-            OnUpdateHand(_rightHand);
+            OnUpdateHand(_leftHand, "left");
+            // OnUpdateHand(_rightHand);
+        }
+
+        if (_rightHand != null)
+        {
+
+            OnUpdateHand(_rightHand, "right");
         }
     }
 
-    void OnUpdateHand(Hand _hand)
+    void OnUpdateHand(Hand _hand, string side)
     {
-        
 
-        
-        if (IsExtended(_hand) && !extendCheck)
+
+
+        if (IsExtended(_hand) && !extendCheck && side == "left")
         {
-            Debug.Log("All fingers are extended");
-            ChangeWelcome();
+            Debug.Log("Right Hand Raised");
+           // SceneManager.LoadScene("Darts");
+            extendCheck = true;
+        }
+
+
+        if (IsExtended(_hand) && !extendCheck && side == "right")
+        {
+            Debug.Log("Left Hand Raised");
+            //SceneManager.LoadScene("DartsLeftHand");
             extendCheck = true;
         }
 
@@ -65,6 +72,8 @@ public class WelcomeScreen1 : MonoBehaviour
         {
             extendCheck = false;
         }
+
+        
     }
 
     bool IsExtended(Hand _hand)
@@ -89,5 +98,4 @@ public class WelcomeScreen1 : MonoBehaviour
 
         return isHandOpen;
     }
-
 }

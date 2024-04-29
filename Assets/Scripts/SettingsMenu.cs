@@ -1,25 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public GameObject volumePanel;
     public GameObject settingsPanel;
+    public Slider volumeSlider;
 
     void Start()
     {
         volumePanel.SetActive(false);
         settingsPanel.SetActive(true);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Set the initial value of the volume slider to match the current music volume
+        volumeSlider.value = AudioManager.GetInstance().MusicSource.volume;
     }
 
     public void callVolume()
@@ -39,4 +34,10 @@ public class SettingsMenu : MonoBehaviour
         settingsPanel.SetActive(true);
     }
 
-};
+    public void SetVolume()
+    {
+        Debug.Log("Slider value changed: " + volumeSlider.value);
+        // Set the music volume to the value of the volume slider
+        AudioManager.GetInstance().SetMusicVolume(volumeSlider.value);
+    }
+}
