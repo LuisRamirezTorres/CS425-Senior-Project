@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameSelection.unity
     guid: 020eab702b987234e9e54dcee01b5c18
+  - enabled: 1
+    path: Assets/Scenes/dartsChivalry.unity
+    guid: cec7887e0e7b23d45a53cfd3fd2ab2d7
   m_configObjects: {}

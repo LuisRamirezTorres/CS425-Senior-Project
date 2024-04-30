@@ -40,15 +40,6 @@ public class MainMenu : MonoBehaviour {
         canExecute = true;
     }
 
-
-
-
-
-
-
-
-
-
     private void OnEnable()
     {
         leapProvider.OnUpdateFrame += OnUpdateFrame;
@@ -95,6 +86,13 @@ public class MainMenu : MonoBehaviour {
         {
             Debug.Log("Thumb is up");
             enterSettings();
+            extendCheck = true;
+        }
+
+        if (IsHangingLoose(_hand) && !extendCheck && side == "right" && canExecute)
+        {
+            Debug.Log("Hanging Loose");
+            quitApplication();
             extendCheck = true;
         }
 
@@ -159,6 +157,33 @@ public class MainMenu : MonoBehaviour {
         return isThumbsUp;
     }
 
+    bool IsHangingLoose(Hand _hand)
+    {
+        bool isThumbsUp;
+
+        Finger _thumb = _hand.GetThumb();
+        Finger _index = _hand.GetIndex();
+        Finger _middle = _hand.GetMiddle();
+        Finger _ring = _hand.GetRing();
+        Finger _pinky = _hand.GetPinky();
+
+
+
+        bool isThumb = _thumb.IsExtended;
+        bool isIndex = _index.IsExtended;
+        bool isMiddle = _middle.IsExtended;
+        bool isRing = _ring.IsExtended;
+        bool isPinky = _pinky.IsExtended;
+
+
+        if (isThumb && !isIndex && !isMiddle && !isRing && isPinky)
+            isThumbsUp = true;
+        else
+            isThumbsUp = false;
+
+        return isThumbsUp;
+    }
+
 
     public void enterSelection()
     {
@@ -168,6 +193,12 @@ public class MainMenu : MonoBehaviour {
     public void enterSettings()
     {
         SceneManager.LoadScene("SettingsMenu");
+    }
+
+    public void quitApplication()
+    {
+        Debug.Log("Quitting Application");
+        Application.Quit();
     }
 
     void Update()
