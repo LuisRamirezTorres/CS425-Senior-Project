@@ -56,7 +56,7 @@ public class dartsParity : MonoBehaviour
         if (IsExtended(_hand) && !extendCheck && side == "left")
         {
             Debug.Log("Right Hand Raised");
-           // SceneManager.LoadScene("Darts");
+           SceneManager.LoadScene("Darts");
             extendCheck = true;
         }
 
@@ -64,7 +64,7 @@ public class dartsParity : MonoBehaviour
         if (IsExtended(_hand) && !extendCheck && side == "right")
         {
             Debug.Log("Left Hand Raised");
-            //SceneManager.LoadScene("DartsLeftHand");
+            SceneManager.LoadScene("DartsLeftHand");
             extendCheck = true;
         }
 

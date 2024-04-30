@@ -112,29 +112,38 @@ public class gameSelector : MonoBehaviour
         }
 
 
-        if (IsThumbsUp(_hand) && !extendCheck && side == "right")
+
+        if (IsHangingLoose(_hand) && !extendCheck && side == "right")
         {
-            Debug.Log("Thumb is up");
+            Debug.Log("Hanging Loose");
             playGame();
             extendCheck = true;
         }
 
-       /* if (isPointingLeft(_hand) && !extendCheck)
-        {
-            Debug.Log("Finger is pointing left");
-            previousGame();
-            extendCheck = true;
-            StartCoroutine(MyCoroutine());
 
+        if (IsThumbsUp(_hand) && !extendCheck && side == "left")
+        {
+            Debug.Log("Thumb is up");
+            //goToMenu();
+            extendCheck = true;
         }
 
-        if (isPointingRight(_hand) && !extendCheck)
-        {
-            Debug.Log("Finger is pointing right");
-            nextGame();
-            extendCheck = true;
-            StartCoroutine(MyCoroutine());
-        }*/
+        /* if (isPointingLeft(_hand) && !extendCheck)
+         {
+             Debug.Log("Finger is pointing left");
+             previousGame();
+             extendCheck = true;
+             StartCoroutine(MyCoroutine());
+
+         }
+
+         if (isPointingRight(_hand) && !extendCheck)
+         {
+             Debug.Log("Finger is pointing right");
+             nextGame();
+             extendCheck = true;
+             StartCoroutine(MyCoroutine());
+         }*/
 
 
 
@@ -284,7 +293,7 @@ public class gameSelector : MonoBehaviour
     }
 
 
-    bool IsThumbsUp(Hand _hand)
+    bool IsHangingLoose(Hand _hand)
     {
         bool isThumbsUp;
 
@@ -311,6 +320,30 @@ public class gameSelector : MonoBehaviour
         return isThumbsUp;
     }
 
+    bool IsThumbsUp(Hand _hand)
+    {
+        bool isThumbsUp;
+
+        Finger _thumb = _hand.GetThumb();
+        Finger _index = _hand.GetIndex();
+        Finger _middle = _hand.GetMiddle();
+        Finger _ring = _hand.GetRing();
+        Finger _pinky = _hand.GetPinky();
+
+
+        bool isThumb = _thumb.IsExtended;
+        bool isIndex = _index.IsExtended;
+        bool isMiddle = _middle.IsExtended;
+        bool isRing = _ring.IsExtended;
+        bool isPinky = _pinky.IsExtended;
+
+        if (isThumb && !isIndex)
+            isThumbsUp = true;
+        else
+            isThumbsUp = false;
+
+        return isThumbsUp;
+    }
 
 
 
@@ -417,7 +450,7 @@ public class gameSelector : MonoBehaviour
         }
         else if (gameCountReference == 2)
         {
-            SceneManager.LoadScene("Darts");
+            SceneManager.LoadScene("dartsChivalry");
             Debug.Log("GameCountReference" + gameCountReference);
         }
     }

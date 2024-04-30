@@ -33,9 +33,9 @@ public class MainMenu : MonoBehaviour {
     {
         Debug.Log("Coroutine started");
 
-        yield return new WaitForSeconds(5); // Wait for 5 seconds
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
 
-        Debug.Log("Coroutine resumed after waiting for 5 seconds");
+        Debug.Log("Coroutine resumed after waiting for 2 seconds");
 
         canExecute = true;
     }

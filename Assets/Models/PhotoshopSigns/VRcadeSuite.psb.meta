@@ -7,7 +7,7 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {instanceID: 0}
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -105,9 +105,7 @@ ScriptedImporter:
       y: 4
       width: 2861
       height: 467
-
-    spriteID: 36a4ec64f9b86af458b2603b4482ee70
-
+    spriteID: f4841de0e0e458942933b15246926e21
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -155,9 +153,7 @@ ScriptedImporter:
     spriteName: VRcade Suite copy
     isGroup: 0
     parentIndex: -1
-
-    spriteID: 36a4ec64f9b86af458b2603b4482ee70
-
+    spriteID: f4841de0e0e458942933b15246926e21
     layerID: 53
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
