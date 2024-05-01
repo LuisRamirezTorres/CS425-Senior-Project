@@ -48,6 +48,7 @@ public class SkeeballGestures : MonoBehaviour
         if (IsThumbsUp(_hand) && !isExtended)
         {
             gameOver.NewGame();
+            this.gameObject.SetActive(false);   
         }
 
         if (!IsThumbsUp(_hand))

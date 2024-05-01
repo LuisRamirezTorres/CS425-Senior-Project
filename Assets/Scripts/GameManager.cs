@@ -47,14 +47,14 @@ public class GameManager : MonoBehaviour
 
         this.currentScore += score;
         this.tempScore = score;
-        if(score == 100)
-        {
-            src.clip = ding_100;
-            src.Play();
-        }
-        else
+        if(score >= 10 && score <= 50)
         {
             src.clip = ding;
+            src.Play();
+        }
+        else if(score == 100)
+        {
+            src.clip = ding_100;
             src.Play();
         }
         
