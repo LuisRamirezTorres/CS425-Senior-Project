@@ -113,7 +113,7 @@ public class gameSelector : MonoBehaviour
 
 
 
-        if (IsHangingLoose(_hand) && !extendCheck && side == "right")
+        if (IsHangingLoose(_hand) && !extendCheck && side == "right" && canExecute)
         {
             Debug.Log("Hanging Loose");
             playGame();
@@ -121,7 +121,7 @@ public class gameSelector : MonoBehaviour
         }
 
 
-        if (IsThumbsUp(_hand) && !extendCheck && side == "left")
+        if (IsThumbsUp(_hand) && !extendCheck && side == "left" && canExecute)
         {
             Debug.Log("Thumb is up");
             goToMenu();
