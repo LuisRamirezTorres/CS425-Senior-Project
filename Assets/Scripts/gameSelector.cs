@@ -124,7 +124,7 @@ public class gameSelector : MonoBehaviour
         if (IsThumbsUp(_hand) && !extendCheck && side == "left")
         {
             Debug.Log("Thumb is up");
-            //goToMenu();
+            goToMenu();
             extendCheck = true;
         }
 
