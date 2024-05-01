@@ -27,6 +27,11 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        playBGM();
+    }
+
+    void playBGM()
+    {
         musicSource.clip = background;
         musicSource.Play();
     }
