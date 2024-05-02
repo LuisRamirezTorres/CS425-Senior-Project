@@ -33215,6 +33215,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562135805081252168, guid: e82a5e1dc34398148a3b85d3bc9a5e0a, type: 3}
+      propertyPath: m_text
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562135805081252168, guid: e82a5e1dc34398148a3b85d3bc9a5e0a, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -33236,7 +33240,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
     - target: {fileID: 8562135805081252168, guid: e82a5e1dc34398148a3b85d3bc9a5e0a, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4284858741
+      value: 4285885560
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562135805081252168, guid: e82a5e1dc34398148a3b85d3bc9a5e0a, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562135805081252168, guid: e82a5e1dc34398148a3b85d3bc9a5e0a, type: 3}
       propertyPath: m_enableVertexGradient
@@ -47897,6 +47905,22 @@ PrefabInstance:
       propertyPath: sfx
       value: 
       objectReference: {fileID: 8300000, guid: 217a78e46dbb04f43b32c24e4da1463f, type: 3}
+    - target: {fileID: 6779236179650422288, guid: c36e9ed7aab72104eade1276d172f076, type: 3}
+      propertyPath: randomX1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779236179650422288, guid: c36e9ed7aab72104eade1276d172f076, type: 3}
+      propertyPath: randomX2
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779236179650422288, guid: c36e9ed7aab72104eade1276d172f076, type: 3}
+      propertyPath: randomY1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779236179650422288, guid: c36e9ed7aab72104eade1276d172f076, type: 3}
+      propertyPath: randomY2
+      value: 2.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6779236179650422288, guid: c36e9ed7aab72104eade1276d172f076, type: 3}
       propertyPath: spawnDart
       value: 

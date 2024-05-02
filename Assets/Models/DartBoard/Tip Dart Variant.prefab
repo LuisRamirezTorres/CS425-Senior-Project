@@ -203,6 +203,10 @@ MonoBehaviour:
   dartBoardRB: {fileID: 3336312929181936255, guid: 4ab7183c27fcd254fa33bf1f8b7e9fad, type: 3}
   x_added_speed: 3.5
   y_added_speed: 2
+  randomX1: 3
+  randomX2: 3.5
+  randomY1: 2
+  randomY2: 2.25
   turn: 2
   audioSource: {fileID: 8525650512320856352, guid: 918a2836c2ad7194e836ca4947572466, type: 3}
   sfx: {fileID: 8300000, guid: 217a78e46dbb04f43b32c24e4da1463f, type: 3}
