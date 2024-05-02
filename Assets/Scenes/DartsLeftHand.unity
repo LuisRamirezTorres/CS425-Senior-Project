@@ -33393,7 +33393,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
     - target: {fileID: 8562135805081252168, guid: e82a5e1dc34398148a3b85d3bc9a5e0a, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4284858741
+      value: 4278255615
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562135805081252168, guid: e82a5e1dc34398148a3b85d3bc9a5e0a, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562135805081252168, guid: e82a5e1dc34398148a3b85d3bc9a5e0a, type: 3}
       propertyPath: m_enableVertexGradient
