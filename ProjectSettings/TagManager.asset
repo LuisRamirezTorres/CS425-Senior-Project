@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ball
   - Skeeball
+  - Tip Dart
+  - bullseye
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - 
   - PhysicalHands
   - PhysicalHandsReset
-  - 
+  - Glow
   - 
   - 
   - 

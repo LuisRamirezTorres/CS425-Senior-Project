@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class ThrowingTest : MonoBehaviour
 {
+    public float y;
+    public float x;
+    
     [Header("References")] 
     public Transform cam;
     public Transform attackPoint;
     public GameObject objectToThrow;
+    public Rigidbody dart;
 
     [Header("Settings")] 
     public int totalThrows;
@@ -17,6 +21,7 @@ public class ThrowingTest : MonoBehaviour
     public KeyCode throwKey = KeyCode.Mouse0;
     public float throwForce;
     public float throwUpwardForce;
+
 
     bool readyToThrow;
     
@@ -29,10 +34,12 @@ public class ThrowingTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
+        if (Input.GetKeyDown(throwKey))
+            dart.velocity = transform.right * 2 + transform.forward * y + transform.up * x;
+        /*if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
         {
             Throw();
-        }
+        }*/
     }
 
     void Throw()

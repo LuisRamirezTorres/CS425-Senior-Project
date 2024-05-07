@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tip Dart Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      propertyPath: m_TagString
+      value: Tip Dart
+      objectReference: {fileID: 0}
     - target: {fileID: 1638581748493467253, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.29469758
@@ -64,6 +68,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4643373916963244564, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643373916963244564, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -6387625228405719229, guid: daf6aa48fb41df64f8fa49921367b45c, type: 3}
+    - target: {fileID: 4643373916963244564, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2321595615710281431, guid: d44fe9a1ffc930b4fb6bd9f482daf16b, type: 3}
+    - target: {fileID: 4643373916963244564, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 15e3326655643184ebdabfa28097159b, type: 2}
+    - target: {fileID: 4643373916963244564, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 15e3326655643184ebdabfa28097159b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -76,6 +100,9 @@ PrefabInstance:
       addedObject: {fileID: 1352561615280479851}
     - targetCorrespondingSourceObject: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
       insertIndex: -1
+      addedObject: {fileID: -8497369290604025373}
+    - targetCorrespondingSourceObject: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 6779236179650422288}
     - targetCorrespondingSourceObject: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
       insertIndex: -1
@@ -83,6 +110,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8943200119361614357}
+    - targetCorrespondingSourceObject: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2291271204626266616}
+    - targetCorrespondingSourceObject: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6189507147752307685}
+    - targetCorrespondingSourceObject: {fileID: 264698631272547083, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 556337323453561659}
   m_SourcePrefab: {fileID: 100100000, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
 --- !u!1 &5495455744778267216 stripped
 GameObject:
@@ -139,6 +175,18 @@ CapsuleCollider:
   m_Height: 0.7773542
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.16}
+--- !u!114 &-8497369290604025373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495455744778267216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54af656ba520e164c972ed85742581f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6779236179650422288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +203,14 @@ MonoBehaviour:
   dartBoardRB: {fileID: 3336312929181936255, guid: 4ab7183c27fcd254fa33bf1f8b7e9fad, type: 3}
   x_added_speed: 3.5
   y_added_speed: 2
+  randomX1: 3
+  randomX2: 3.5
+  randomY1: 2
+  randomY2: 2.25
+  turn: 2
+  audioSource: {fileID: 8525650512320856352, guid: 918a2836c2ad7194e836ca4947572466, type: 3}
+  sfx: {fileID: 8300000, guid: 217a78e46dbb04f43b32c24e4da1463f, type: 3}
+  spawnDart: {fileID: 5267130590091222858, guid: 1874e7de911f297469ad12e492a21d18, type: 3}
 --- !u!114 &606651303766550789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,3 +310,71 @@ MonoBehaviour:
               m_StringArgument: Accelerate
               m_BoolArgument: 1
             m_CallState: 2
+          - m_Target: {fileID: 556337323453561659}
+            m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+            m_MethodName: set_enabled
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: GetDartTransform
+              m_BoolArgument: 0
+            m_CallState: 2
+--- !u!114 &-2291271204626266616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495455744778267216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c272a326693f9a24c89881d5dfb22ffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineRenderer: {fileID: 8505456127051198413, guid: f5284992187845a4991d6c343b17151c, type: 3}
+  arc: 0
+  lineSegments: 60
+  timeOfFlight: 5
+--- !u!114 &6189507147752307685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495455744778267216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1102203ea117bd545821e422eedfd6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dart: {fileID: 6436427310979553070}
+  dartTrajectoryLine: {fileID: -2291271204626266616}
+--- !u!95 &556337323453561659
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495455744778267216}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b92e0d2e61694342bcef3300c969ec1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &6436427310979553070 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1638581748493467253, guid: b3f3c333ff7e3eb419c4c080911a3a25, type: 3}
+  m_PrefabInstance: {fileID: 5760000442812279131}
+  m_PrefabAsset: {fileID: 0}

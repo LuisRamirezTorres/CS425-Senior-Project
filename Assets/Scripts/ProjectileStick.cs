@@ -25,10 +25,4 @@ public class ProjectileStick : MonoBehaviour
         
         transform.SetParent(collision.transform);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
